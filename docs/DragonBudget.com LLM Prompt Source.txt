@@ -99,6 +99,7 @@ Structured Workflow:
 [prompt 73] - Implemented - Add Founder Build Log Page
 [prompt 74] - Implemented - Add Complete Internal Link Graph Pass
 [prompt 75] - Implemented - Add Final Launch Day Checklist Page
+[prompt 76] - Implemented - Add Generated Fantasy Blue Dragon Head PNG Icon, Single Top Menu, and Non-Negative Money Display Pass
 
 [validation: site loads by opening index.html] - Implemented
 [validation: custom domain CNAME present] - Implemented
@@ -113,14 +114,19 @@ Structured Workflow:
 [validation: every public HTML page has resolving relative links] - Implemented
 [validation: local file navigation points directly at index.html files] - Implemented
 [validation: light and dark mode toggle available site-wide] - Implemented
+[validation: only one top navigation menu is rendered] - Implemented
+[validation: calculator and demos avoid negative currency displays] - Implemented
+[validation: public app preview uses one top menu and positive outflow labels] - Implemented
+[validation: generated fantasy blue dragon head PNG is used for favicon, manifest, header mark, and mascot/advisor references] - Implemented
 [validation: external distribution and search-console submission] - Implemented - Static setup checklist created; final account actions are performed after deployment.
 
 Notes:
 - The prompt source is now the living implementation ledger. Status labels above should be updated whenever a page, workflow, or validation changes.
 - External account actions such as GitHub Pages settings, DNS verification, HTTPS confirmation, and Search Console submission are tracked in the launch pages because they cannot be completed from static files alone.
-- Prompts 22 through 75 expanded the site into a 62-page static product, guide, trust, launch, and QA system with a complete human site map and matching XML sitemap.
+- Prompts 22 through 76 expanded the site into a 62-page static product, guide, trust, launch, polish, and QA system with a complete human site map and matching XML sitemap.
 - The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
 - Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
+- Prompt 76 now uses a generated fantasy blue dragon-head PNG for the favicon, manifest icons, header mark, mascot usage, and advisor references; it also removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
 
 Generated Prompt Details:
 
@@ -300,3 +306,6 @@ Add a complete internal link graph pass. Make sure every high-value page links n
 
 [prompt 75]
 Add a final Launch Day Checklist page. Include DNS, HTTPS, GitHub Pages settings, sitemap submission, social posts, feedback collection, analytics/privacy update, and post-launch audit.
+
+[prompt 76]
+Add a blue Dragon head properly fitted for an icon genetate this. Also look at this image there is some negative values and such which is incorrect, also there are 2 menu bars there should only be the top menu bar. let's fix that only the top one should show one navigational menu. also do a pass to make sure all of the pages reflect accordingly.

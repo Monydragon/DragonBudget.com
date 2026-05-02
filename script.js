@@ -1,9 +1,5 @@
 const themeStorageKey = "dragon-budget-theme";
 const root = document.documentElement;
-const activeScript = document.currentScript || document.querySelector('script[src$="script.js"]');
-const scriptSource = activeScript?.getAttribute("src") || "script.js";
-const siteRootPrefix = scriptSource.replace(/script\.js(?:\?.*)?$/, "");
-const siteRootHref = `${siteRootPrefix}index.html`;
 
 function readSavedTheme() {
   try {
@@ -50,26 +46,6 @@ applyTheme(readSavedTheme() || "light");
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navWrap = document.querySelector(".nav-wrap");
-const siteHeader = document.querySelector(".site-header");
-
-if (siteHeader && !document.querySelector(".standard-quick-nav")) {
-  const quickNav = document.createElement("nav");
-  quickNav.className = "standard-quick-nav";
-  quickNav.setAttribute("aria-label", "Standard site shortcuts");
-  quickNav.innerHTML = [
-    ["Home", siteRootHref],
-    ["Calculator", `${siteRootPrefix}can-i-afford-this-calculator/index.html`],
-    ["Advisor", `${siteRootPrefix}advisor/index.html`],
-    ["Features", `${siteRootPrefix}features/index.html`],
-    ["Roadmap", `${siteRootPrefix}roadmap/index.html`],
-    ["Guides", `${siteRootPrefix}guides/index.html`],
-    ["Site Map", `${siteRootPrefix}site-map/index.html`],
-    ["Privacy", `${siteRootPrefix}privacy/index.html`],
-  ]
-    .map(([label, href]) => `<a href="${href}">${label}</a>`)
-    .join("");
-  siteHeader.appendChild(quickNav);
-}
 
 if (navWrap && !document.querySelector(".theme-toggle")) {
   const themeToggle = document.createElement("button");
@@ -106,6 +82,10 @@ if (calculatorForm) {
     style: "currency",
     currency: "USD",
   });
+
+  function displayMoney(value) {
+    return currency.format(Math.max(0, value));
+  }
 
   const fields = [
     "current-balance",
@@ -153,7 +133,7 @@ if (calculatorForm) {
       return;
     }
 
-    const safeToSpend =
+    const safeToSpendRaw =
       values["current-balance"] +
       values["upcoming-income"] -
       values["bills-due"] -
@@ -161,10 +141,12 @@ if (calculatorForm) {
       values["savings-goal"] -
       values["emergency-buffer"];
 
+    const safeToSpend = Math.max(0, safeToSpendRaw);
     const remainingAfterPurchase = safeToSpend - values["purchase-amount"];
+    const shortfall = Math.abs(Math.min(0, remainingAfterPurchase));
 
-    output.safe.textContent = currency.format(safeToSpend);
-    output.remaining.textContent = currency.format(remainingAfterPurchase);
+    output.safe.textContent = displayMoney(safeToSpend);
+    output.remaining.textContent = displayMoney(remainingAfterPurchase);
 
     if (remainingAfterPurchase >= 25) {
       setStatus("Yes");
@@ -177,7 +159,7 @@ if (calculatorForm) {
     } else {
       setStatus("No");
       output.explanation.textContent =
-        "This purchase is larger than your estimated safe-to-spend amount based on the numbers you entered.";
+        `This purchase is larger than your estimated safe-to-spend amount. You would need ${currency.format(shortfall)} more room before this fits.`;
     }
   }
 
@@ -216,22 +198,27 @@ if (cashFlowDemo) {
   const output = cashFlowDemo.querySelector("[data-cash-flow-output]");
   const startingInput = cashFlowDemo.querySelector("#cash-flow-starting");
   const items = [
-    ["Paycheck", 1800, "income"],
-    ["Rent", -1200, "bill"],
-    ["Netflix", -15.49, "subscription"],
-    ["Groceries", -85, "planned"],
-    ["Car insurance", -145, "bill"],
-    ["Weekend trip", -200, "event"],
+    ["Paycheck", 1800, "income", "in"],
+    ["Rent", 1200, "bill", "out"],
+    ["Netflix", 15.49, "subscription", "out"],
+    ["Groceries", 85, "planned", "out"],
+    ["Car insurance", 145, "bill", "out"],
+    ["Weekend trip", 200, "event", "out"],
   ];
   const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+
+  function formatBalance(balance) {
+    return balance >= 0 ? money.format(balance) : `Short by ${money.format(Math.abs(balance))}`;
+  }
 
   function renderCashFlow() {
     let balance = Number(startingInput.value || 0);
     output.innerHTML = items
-      .map(([name, amount, type]) => {
-        balance += amount;
+      .map(([name, amount, type, direction]) => {
+        balance += direction === "in" ? amount : -amount;
         const risk = balance < 250 ? " warning" : "";
-        return `<li class="demo-row${risk}"><span><strong>${name}</strong><small>${type}</small></span><span>${money.format(amount)}</span><span>${money.format(balance)}</span></li>`;
+        const amountLabel = direction === "in" ? "Income" : "Outflow";
+        return `<li class="demo-row${risk}"><span><strong>${name}</strong><small>${type}</small></span><span><small>${amountLabel}</small>${money.format(amount)}</span><span>${formatBalance(balance)}</span></li>`;
       })
       .join("");
   }
@@ -255,7 +242,8 @@ if (eventBudgetDemo) {
     ]);
     const spent = items.reduce((sum, [, value]) => sum + value, 0);
     const remaining = total - spent;
-    output.innerHTML = `<p><strong>Spent:</strong> ${money.format(spent)}</p><p><strong>Remaining:</strong> ${money.format(remaining)}</p><p><strong>Status:</strong> ${remaining >= 0 ? "This event fits the sample budget." : "This event is over the sample budget."}</p>`;
+    const overage = Math.abs(Math.min(0, remaining));
+    output.innerHTML = `<p><strong>Spent:</strong> ${money.format(spent)}</p><p><strong>Remaining:</strong> ${money.format(Math.max(0, remaining))}</p><p><strong>Status:</strong> ${remaining >= 0 ? "This event fits the sample budget." : `This event is over the sample budget by ${money.format(overage)}.`}</p>`;
   }
 
   eventBudgetDemo.addEventListener("input", renderEventBudget);
@@ -271,7 +259,7 @@ if (subscriptionDemo) {
   function renderSubscriptions() {
     const rows = [...subscriptionDemo.querySelectorAll("[data-subscription-row]")].map((row) => {
       const name = row.querySelector("[data-sub-name]").value || "Subscription";
-      const cost = Number(row.querySelector("[data-sub-cost]").value || 0);
+      const cost = Math.max(0, Number(row.querySelector("[data-sub-cost]").value || 0));
       const cycle = row.querySelector("[data-sub-cycle]").value;
       const monthly = cycle === "yearly" ? cost / 12 : cost;
       return { name, monthly };

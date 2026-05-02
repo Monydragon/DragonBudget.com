@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 760" role="img" aria-labelledby="title desc">
+  <title id="title">Corrected Dragon Budget app preview</title>
+  <desc id="desc">Three dark Dragon Budget app preview screens with one top menu and positive money displays.</desc>
+  <defs>
+    <linearGradient id="screen" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#0d1b2e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#132a45"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#46d9ff"/>
+      <stop offset="1" stop-color="#2f8cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020712" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect width="1500" height="760" fill="#06101d"/>
+  <text x="92" y="76" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">Dragon Budget app direction</text>
+  <text x="92" y="116" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="24">Corrected preview: one top menu, positive outflow labels, mature blue dragon icon.</text>
+
+  <g transform="translate(70 150)" filter="url(#shadow)">
+    <rect width="398" height="560" rx="34" fill="url(#screen)" stroke="#8ca6c7" stroke-width="2"/>
+    <text x="32" y="52" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Dashboard</text>
+    <g transform="translate(246 24) scale(.16)">
+      <rect width="512" height="512" rx="112" fill="#12315c"/>
+      <path d="M124 264c19-92 90-154 188-157 54-2 101 16 135 50-47 3-84 17-114 43 58 11 101 41 130 91-62-17-114-9-158 24 33 9 60 24 82 46-57 13-112 4-165-27-8 35-28 69-60 102-1-54-14-99-38-172Z" fill="url(#blue)" stroke="#8edfff" stroke-width="18" stroke-linejoin="round"/>
+      <path d="M232 233c25-16 54-23 88-21-19 13-32 30-40 50 26-10 52-11 79-4-36 11-64 27-85 48-28-16-42-40-42-73Z" fill="#d6f7ff"/>
+      <path d="M283 258c21-1 39 4 55 15-20 2-36 7-50 15l-5-30Z" fill="#06101d"/>
+    </g>
+    <rect x="28" y="84" width="342" height="150" rx="20" fill="url(#card)" stroke="#24405e"/>
+    <text x="52" y="126" fill="#dbe9f8" font-family="Arial, Helvetica, sans-serif" font-size="20">Safe to spend</text>
+    <text x="52" y="184" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800">$237.45</text>
+    <rect x="52" y="204" width="190" height="12" rx="6" fill="#24405e"/>
+    <rect x="52" y="204" width="94" height="12" rx="6" fill="#37d67a"/>
+    <rect x="28" y="256" width="158" height="92" rx="16" fill="url(#card)" stroke="#24405e"/>
+    <text x="48" y="294" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="17">Current</text>
+    <text x="48" y="326" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800">$1,987.41</text>
+    <rect x="212" y="256" width="158" height="92" rx="16" fill="url(#card)" stroke="#24405e"/>
+    <text x="232" y="294" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="17">Next payday</text>
+    <text x="232" y="326" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800">May 23</text>
+    <rect x="28" y="372" width="342" height="120" rx="18" fill="url(#card)" stroke="#24405e"/>
+    <text x="52" y="414" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Weekend Trip</text>
+    <text x="52" y="452" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="18">Remaining budget</text>
+    <text x="250" y="452" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">$320.00</text>
+  </g>
+
+  <g transform="translate(552 150)" filter="url(#shadow)">
+    <rect width="398" height="560" rx="34" fill="url(#screen)" stroke="#8ca6c7" stroke-width="2"/>
+    <text x="32" y="52" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Cash Flow</text>
+    <rect x="28" y="78" width="342" height="44" rx="14" fill="#132a45" stroke="#24405e"/>
+    <text x="74" y="107" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="16">Week</text>
+    <rect x="148" y="84" width="102" height="32" rx="12" fill="#1f6fd2"/>
+    <text x="174" y="107" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16">Month</text>
+    <text x="286" y="107" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="16">Custom</text>
+    <rect x="28" y="146" width="342" height="294" rx="18" fill="url(#card)" stroke="#24405e"/>
+    <text x="52" y="184" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="17">Starting balance</text>
+    <text x="242" y="184" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="17">$1,250.00</text>
+    <line x1="68" x2="68" y1="206" y2="404" stroke="#24405e" stroke-width="3"/>
+    <circle cx="68" cy="232" r="8" fill="#37d67a"/>
+    <text x="94" y="238" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Paycheck</text>
+    <text x="258" y="238" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="18">Income $2,100</text>
+    <circle cx="68" cy="284" r="8" fill="#f6b84b"/>
+    <text x="94" y="290" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Rent</text>
+    <text x="254" y="290" fill="#f6b84b" font-family="Arial, Helvetica, sans-serif" font-size="18">Outflow $1,200</text>
+    <circle cx="68" cy="336" r="8" fill="#f6b84b"/>
+    <text x="94" y="342" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Insurance</text>
+    <text x="260" y="342" fill="#f6b84b" font-family="Arial, Helvetica, sans-serif" font-size="18">Outflow $145</text>
+    <circle cx="68" cy="388" r="8" fill="#f6b84b"/>
+    <text x="94" y="394" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="20">Trip plan</text>
+    <text x="260" y="394" fill="#f6b84b" font-family="Arial, Helvetica, sans-serif" font-size="18">Outflow $200</text>
+    <rect x="28" y="464" width="342" height="60" rx="16" fill="#132a45" stroke="#24405e"/>
+    <text x="52" y="502" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="18">Projected end balance</text>
+    <text x="256" y="502" fill="#2f8cff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">$3,384.51</text>
+  </g>
+
+  <g transform="translate(1034 150)" filter="url(#shadow)">
+    <rect width="398" height="560" rx="34" fill="url(#screen)" stroke="#8ca6c7" stroke-width="2"/>
+    <text x="32" y="52" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Event Details</text>
+    <rect x="28" y="82" width="342" height="126" rx="20" fill="url(#card)" stroke="#24405e"/>
+    <circle cx="88" cy="145" r="36" fill="url(#blue)"/>
+    <text x="140" y="134" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800">Weekend Trip</text>
+    <text x="140" y="166" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="17">May 30 - Jun 1</text>
+    <text x="272" y="134" fill="#bdd0e5" font-family="Arial, Helvetica, sans-serif" font-size="17">Budget</text>
+    <text x="272" y="168" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="800">$800</text>
+    <rect x="28" y="232" width="342" height="126" rx="20" fill="url(#card)" stroke="#24405e"/>
+    <text x="70" y="284" fill="#2f8cff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">$480 spent</text>
+    <text x="218" y="284" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">$320 left</text>
+    <path d="M170 320a48 48 0 1 1 58 0" fill="none" stroke="#2f8cff" stroke-width="14" stroke-linecap="round"/>
+    <text x="199" y="316" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" text-anchor="middle">60%</text>
+    <rect x="28" y="382" width="342" height="112" rx="20" fill="url(#card)" stroke="#24405e"/>
+    <text x="58" y="426" fill="#f5f8ff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800">Can I afford this?</text>
+    <text x="58" y="462" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="19">Yes, this fits the current plan.</text>
+  </g>
+</svg>

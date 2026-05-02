@@ -186,32 +186,6 @@ a:hover {
   background: var(--nav-active-bg);
 }
 
-.standard-quick-nav {
-  display: flex;
-  gap: 0.35rem;
-  overflow-x: auto;
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 0 0 0.55rem;
-  scrollbar-width: thin;
-}
-
-.standard-quick-nav a {
-  flex: 0 0 auto;
-  padding: 0.35rem 0.6rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--heading);
-  background: var(--panel-bg);
-  font-size: 0.84rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.standard-quick-nav a:hover {
-  background: var(--nav-active-bg);
-}
-
 .theme-toggle {
   display: inline-flex;
   min-height: 40px;
@@ -784,7 +758,7 @@ tr:last-child td {
   border: 1px solid rgba(70, 217, 255, 0.42);
   border-radius: 50%;
   background:
-    url("assets/mature-blue-dragon.svg") center / cover no-repeat,
+    url("assets/dragon-head-icon.png") center / cover no-repeat,
     rgba(47, 140, 255, 0.12);
   box-shadow: 0 0 36px rgba(47, 140, 255, 0.32);
 }
@@ -998,8 +972,7 @@ tr:last-child td {
   .site-footer,
   .hero-actions,
   .actions,
-  .theme-toggle,
-  .standard-quick-nav {
+  .theme-toggle {
     display: none;
   }
 

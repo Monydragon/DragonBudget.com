@@ -1,0 +1,302 @@
+DragonBudget.com LLM Prompt Source
+Last updated: 2026-05-02
+Build location: repository root
+Source plan files:
+- Dragon_Budget_AI_Static_Site_Action_Plan_and_Prompt_Pack.docx
+- Dragon_Budget_AI_Static_Site_Prompt_Pack.md
+
+[design: no-build static GitHub Pages site in repository root] - Implemented
+[design: plain HTML, CSS, and JavaScript only] - Implemented
+[design: deep blue, lighter blue, white, and gold accent brand direction] - Implemented
+[design: responsive desktop and mobile navigation] - Implemented
+[design: accessible semantic HTML and visible crawlable content] - Implemented
+[design: static visual assets for logo, hero preview, favicon, and social preview] - Implemented
+[design: honest app status labels for available vs planned features] - Implemented
+[design: mature blue dragon mascot direction] - Implemented
+[design: light mode default with quick dark mode toggle] - Implemented
+
+Structured Workflow:
+1. Foundation: keep root static files working, docs reserved for source documents, and every public page listed in sitemap.xml.
+2. Trust: keep status labels honest, privacy and terms visible, and planned app features clearly separated from available static tools.
+3. Utility: prioritize working browser-only calculators and demos before adding more marketing pages.
+4. Design: default the website to light mode for broad readability, offer dark mode for the premium app-inspired mood, and keep the mascot mature.
+5. Content: every page should answer its main question in the opening paragraph, then link to the calculator, roadmap, or related guide.
+6. Verification: after each prompt batch, check relative links, metadata uniqueness, sitemap XML, JSON-LD, and local serving.
+7. Launch: publish from repository root, confirm CNAME/HTTPS, submit sitemap, and collect feedback.
+
+[prompt 1] - Implemented - Create the Static Site Skeleton
+[prompt 2] - Implemented - Write the Homepage
+[prompt 3] - Implemented - Build the Calculator Page
+[prompt 4] - Implemented - Generate JSON-LD Schema
+[prompt 5] - Implemented - Write the How It Works Page
+[prompt 6] - Implemented - Write the Comparison Page
+[prompt 7] - Implemented - Write the FAQ Page
+[prompt 8] - Implemented - Write Five AI-Friendly Guide Articles
+[prompt 9] - Implemented - Generate GitHub Pages Deployment Instructions
+[prompt 10] - Implemented - Technical Audit Prompt
+[prompt 11] - Implemented - Local LLM Small-Model Version
+[prompt 12] - Implemented - Changelog / Freshness Page Prompt
+[prompt 13] - Implemented - Social Launch Posts
+[prompt 14] - Implemented - Press/About Page Prompt
+[prompt 15] - Implemented - Privacy Page Prompt
+[prompt 16] - Implemented - Exact Implementation Sprint Prompt
+[prompt 17] - Implemented - Build the Dragon Advisor Preview Page
+[prompt 18] - Implemented - Apply Mockup-Inspired Premium Design Polish
+[prompt 19] - Implemented - Add Product Roadmap and Screen Inventory
+[prompt 20] - Implemented - Add Launch Plan and Deployment Checklist
+[prompt 21] - Implemented - Add Design Direction Page Using Mockup Inspiration
+[prompt 22] - Implemented - Add Calculator Scenario Examples and Presets
+[prompt 23] - Implemented - Add App Status Matrix for Available, Planned, and Future Features
+[prompt 24] - Implemented - Add Data Ownership and Export Philosophy Page
+[prompt 25] - Implemented - Add Social Launch Copy Page
+[prompt 26] - Implemented - Expand FAQ Schema and Cross-Linking
+[prompt 27] - Implemented - Add Accessibility Checklist Page
+[prompt 28] - Implemented - Run SEO and Internal Linking Polish Pass
+[prompt 29] - Implemented - Add Screenshot and Mockup Gallery
+[prompt 30] - Implemented - Add Changelog Publishing Process
+[prompt 31] - Implemented - Add Press Kit Snippets and Brand Facts
+[prompt 32] - Implemented - Add Privacy Roadmap for Accounts, Sync, and Bank Connections
+[prompt 33] - Implemented - Add Pricing Transparency Examples
+[prompt 34] - Implemented - Expand Budgeting App Comparison Content
+[prompt 35] - Implemented - Add Guide for Subscription Audits
+[prompt 36] - Implemented - Add Guide for Paycheck Budgeting
+[prompt 37] - Implemented - Add Guide for Event Budgeting
+[prompt 38] - Implemented - Add Guide for Irregular Income
+[prompt 39] - Implemented - Add Guide for Budget Categories
+[prompt 40] - Implemented - Add Interactive Cash Flow Demo
+[prompt 41] - Implemented - Add Interactive Event Budget Demo
+[prompt 42] - Implemented - Add Subscription Savings Calculator
+[prompt 43] - Implemented - Add Downloadable Prompt Pack Landing Page
+[prompt 44] - Implemented - Add Structured Data Validation Checklist
+[prompt 45] - Implemented - Add Analytics and Search Console Setup Plan
+[prompt 46] - Implemented - Add Final Production Readiness Audit
+[prompt 47] - Implemented - Add Light and Dark Mode Toggle
+[prompt 48] - Implemented - Add Mature Blue Dragon Mascot Direction
+[prompt 49] - Implemented - Audit Every Public Page for Working Links and Metadata
+[prompt 50] - Implemented - Add Structured Workflow to Prompt Source
+[prompt 51] - Implemented - Create Site-Wide Navigation and Footer Standardization Pass
+[prompt 52] - Implemented - Add Complete Site Map Page for Humans
+[prompt 53] - Implemented - Add Features Page for Planned App Modules
+[prompt 54] - Implemented - Add Safe-to-Spend Methodology Page
+[prompt 55] - Implemented - Add Bills and Subscriptions Landing Page
+[prompt 56] - Implemented - Add Cash Flow Planning Landing Page
+[prompt 57] - Implemented - Add Event Budgeting Landing Page
+[prompt 58] - Implemented - Add Dragon Advisor Methodology Page
+[prompt 59] - Implemented - Add Local-First Privacy Landing Page
+[prompt 60] - Implemented - Add Beta Feedback Landing Page
+[prompt 61] - Implemented - Add Brand Voice and Copy Style Guide
+[prompt 62] - Implemented - Add Mature Dragon Mascot Usage Guide
+[prompt 63] - Implemented - Add Visual QA Checklist for Light and Dark Themes
+[prompt 64] - Implemented - Add Mobile Navigation QA Pass
+[prompt 65] - Implemented - Add Calculator Error and Edge Case QA Pass
+[prompt 66] - Implemented - Add No-JavaScript Fallback Review
+[prompt 67] - Implemented - Add Performance Budget and Asset Optimization Pass
+[prompt 68] - Implemented - Add Print-Friendly Guide Styling
+[prompt 69] - Implemented - Add Open Graph Image and Social Preview Refresh
+[prompt 70] - Implemented - Add Schema Coverage for Roadmap, Guides, and Web App Pages
+[prompt 71] - Implemented - Add Content Freshness Review Schedule
+[prompt 72] - Implemented - Add Competitive Positioning Page
+[prompt 73] - Implemented - Add Founder Build Log Page
+[prompt 74] - Implemented - Add Complete Internal Link Graph Pass
+[prompt 75] - Implemented - Add Final Launch Day Checklist Page
+
+[validation: site loads by opening index.html] - Implemented
+[validation: custom domain CNAME present] - Implemented
+[validation: robots.txt present] - Implemented
+[validation: sitemap.xml present] - Implemented
+[validation: unique title and meta description on each page] - Implemented
+[validation: canonical URLs use https://dragonbudget.com] - Implemented
+[validation: calculator runs in browser and does not store inputs] - Implemented
+[validation: JSON-LD on key pages] - Implemented
+[validation: privacy page linked in footer] - Implemented
+[validation: no fake testimonials] - Implemented
+[validation: every public HTML page has resolving relative links] - Implemented
+[validation: local file navigation points directly at index.html files] - Implemented
+[validation: light and dark mode toggle available site-wide] - Implemented
+[validation: external distribution and search-console submission] - Implemented - Static setup checklist created; final account actions are performed after deployment.
+
+Notes:
+- The prompt source is now the living implementation ledger. Status labels above should be updated whenever a page, workflow, or validation changes.
+- External account actions such as GitHub Pages settings, DNS verification, HTTPS confirmation, and Search Console submission are tracked in the launch pages because they cannot be completed from static files alone.
+- Prompts 22 through 75 expanded the site into a 62-page static product, guide, trust, launch, and QA system with a complete human site map and matching XML sitemap.
+- The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
+- Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
+
+Generated Prompt Details:
+
+[prompt 17]
+Build a Dragon Advisor preview page for the static DragonBudget.com site. The page should explain that Dragon Advisor is planned as a local-data budgeting assistant, not a generic chatbot. Include sample questions, sample answers, cited budget entries, privacy notes, and a mature blue dragon identity. Keep all content static and honest about feature status.
+
+[prompt 18]
+Apply mockup-inspired premium design polish to the static site. Use the provided dark Dragon Budget mockup as inspiration: deep navy backgrounds, raised cards, electric blue accents, cyan highlights, emerald positive states, amber warnings, red danger states, crisp borders, and a mature financial cockpit feeling. Avoid childish styling.
+
+[prompt 19]
+Add a product roadmap and screen inventory page. Show what is available now, what is planned for the MVP, and what is future. Include core screens such as Dashboard, Cash Flow, Events, Transactions, Subscriptions, Goals, Advisor, Reports, Accounts, Settings, and Data Ownership.
+
+[prompt 20]
+Add a launch plan page for GitHub Pages deployment. Include root publishing instructions, CNAME/custom domain notes, HTTPS, sitemap and robots checks, schema validation, calculator testing, Search Console submission, and first-feedback launch tasks.
+
+[prompt 21]
+Add a design direction page using the provided mockup as inspiration. Include the mockup image, visual principles, palette notes, mascot direction, and explicit status language that the image is planning inspiration, not a claim that the app is already shipped.
+
+[prompt 22]
+Add calculator scenario examples and presets. Include realistic preset examples such as between paychecks, weekend dinner, upcoming rent, event purchase, and low-buffer month. Let users load presets into the calculator without storing data.
+
+[prompt 23]
+Add a clear app status matrix. Separate Available, Planned, Future, and Not Included Yet. Link each status to relevant pages so visitors and AI systems understand what Dragon Budget can do today.
+
+[prompt 24]
+Add a data ownership and export philosophy page. Explain manual-first privacy, local storage goals, CSV/JSON export plans, backup goals, and the future sync boundary without promising features before they exist.
+
+[prompt 25]
+Add a social launch copy page. Generate human posts for Bluesky, Threads, Facebook, LinkedIn, and Reddit feedback requests. Include a short under-280-character version and a longer founder note.
+
+[prompt 26]
+Expand FAQ schema and cross-linking. Add more visible FAQ answers for safe-to-spend, event budgeting, subscriptions, Dragon Advisor, data ownership, app status, and adaptive pricing. Keep schema aligned with visible copy.
+
+[prompt 27]
+Add an accessibility checklist page. Cover contrast, keyboard navigation, focus states, reduced motion, readable charts, mobile text fit, and form labeling. Include what has been handled on the static site and what remains for the app.
+
+[prompt 28]
+Run an SEO and internal linking polish pass. Make sure every page has a useful first-paragraph answer, relevant internal links, unique title and meta description, descriptive headings, sitemap inclusion, and no misleading claims.
+
+[prompt 29]
+Add a screenshot and mockup gallery. Include current static site screenshots or provided app mockups, captioned by status and purpose. Avoid implying mockups are production screens.
+
+[prompt 30]
+Add a changelog publishing process. Define how updates are dated, how planned features are labeled, how launch notes are written, and how stale claims are reviewed.
+
+[prompt 31]
+Add press kit snippets and brand facts. Include a short description, long description, founder attribution, app status, safe-to-spend definition, image guidance, and quote-safe facts.
+
+[prompt 32]
+Add a privacy roadmap for accounts, sync, and bank connections. Explain what must change before adding accounts, analytics, payments, cloud sync, or bank sync. Keep it plain English and review-ready.
+
+[prompt 33]
+Add pricing transparency examples. Explain the adaptive pricing idea with example ranges and guardrails. Avoid implying active billing exists. Include user-respecting language and a planned-feature label.
+
+[prompt 34]
+Expand budgeting app comparison content. Compare Dragon Budget with traditional budgeting apps, spreadsheet budgeting, banking balance views, and subscription management apps without unfair competitor claims.
+
+[prompt 35]
+Add a guide for subscription audits. Explain how to review subscriptions, renewal dates, price changes, and cancellation candidates. Mention Dragon Budget's planned Subscription Watch feature honestly.
+
+[prompt 36]
+Add a guide for paycheck budgeting. Explain how to plan from one paycheck to the next using bills, subscriptions, savings goals, planned expenses, and a buffer.
+
+[prompt 37]
+Add a guide for event budgeting. Explain how to budget for a weekend trip, holiday, birthday, or one-time event while protecting bills and safe-to-spend.
+
+[prompt 38]
+Add a guide for irregular income. Explain how freelancers, gig workers, or variable-hour workers can use conservative income estimates and buffers.
+
+[prompt 39]
+Add a guide for budget categories. Explain how categories, targets, warning thresholds, rollover, and notes can make a budget easier to maintain.
+
+[prompt 40]
+Add an interactive cash-flow demo. Use static JavaScript and sample data to show income, bills, planned expenses, and projected balances over time.
+
+[prompt 41]
+Add an interactive event budget demo. Let users model a simple event budget with transport, food, activities, shopping, and remaining balance.
+
+[prompt 42]
+Add a subscription savings calculator. Let users enter subscription costs and billing cycles to estimate monthly and yearly costs without storing data.
+
+[prompt 43]
+Add a downloadable prompt pack landing page. Summarize the prompt strategy and link to the source prompt files in docs for future builders.
+
+[prompt 44]
+Add a structured data validation checklist. Include JSON-LD pages, validation tools to run after deployment, critical errors to fix, and sitemap consistency.
+
+[prompt 45]
+Add an analytics and Search Console setup plan. Explain how to add analytics later while updating the privacy page first, and how to submit sitemaps to search tools.
+
+[prompt 46]
+Add a final production readiness audit. Check content honesty, mobile layout, link health, metadata, schema, privacy/terms, accessibility, sitemap, robots, deployment, and launch feedback readiness.
+
+[prompt 47]
+Add a quick light and dark mode toggle to the static site. The website should default to light mode for broad readability and majority appeal, while preserving a mature dark fintech mode inspired by the app mockup. The toggle should appear on every page through shared JavaScript, persist the non-financial theme preference locally, and remain keyboard accessible.
+
+[prompt 48]
+Add mature blue dragon mascot direction to the site. Create or include a mature blue dragon guardian visual, use it in the Advisor or design direction pages, and document that the mascot should be sleek, intelligent, protective, and never chibi, goofy, or childlike.
+
+[prompt 49]
+Audit every public page for working links and metadata. Verify all relative links and assets resolve, every page has a unique title, meta description, and canonical URL, sitemap.xml parses, JSON-LD parses, and the site serves locally from repository root.
+
+[prompt 50]
+Add a structured workflow section to the prompt source. The workflow should explain how to proceed from foundation to trust, utility, design, content, verification, and launch so future prompt batches are not random.
+
+[prompt 51]
+Create a site-wide navigation and footer standardization pass. Make all public pages expose the same important routes: Home, Calculator, Advisor, Roadmap, Guides, Design Direction, Launch Plan, About, Privacy, and Terms. Keep mobile navigation usable.
+
+[prompt 52]
+Add a complete human-readable site map page. List every public page by category with short descriptions and status labels.
+
+[prompt 53]
+Add a Features page for planned app modules. Cover Dashboard, Cash Flow, Transactions, Budgets, Bills, Subscriptions, Goals, Insights, Reports, Advisor, Accounts, Settings, Export, Backup, and Premium.
+
+[prompt 54]
+Add a Safe-to-Spend Methodology page. Explain inputs, assumptions, confidence, risk flags, and what the calculation does not know.
+
+[prompt 55]
+Add a Bills and Subscriptions landing page. Explain recurring bill tracking, subscription watch, renewal warnings, cancellation review, and current planned status.
+
+[prompt 56]
+Add a Cash Flow Planning landing page. Explain projected balances, paydays, bills, subscriptions, goals, low-balance warnings, and event planning.
+
+[prompt 57]
+Add an Event Budgeting landing page. Explain weekend trips, holidays, planned purchases, remaining event budget, and affordability checks.
+
+[prompt 58]
+Add a Dragon Advisor Methodology page. Explain local data grounding, citations, plain-language explanations, limitations, privacy, and no-financial-advice wording.
+
+[prompt 59]
+Add a Local-First Privacy landing page. Explain manual-first usage, local storage goals, export/backup goals, and future account/sync boundaries.
+
+[prompt 60]
+Add a Beta Feedback landing page. Invite feedback on calculator clarity, missing inputs, planned app features, and the dark/light design direction without pretending the app is launched.
+
+[prompt 61]
+Add a Brand Voice and Copy Style Guide. Define the tone as clear, protective, direct, mature, slightly warm, and never shame-based.
+
+[prompt 62]
+Add a Mature Dragon Mascot Usage Guide. Define where the dragon appears, how large it should be, what styles to avoid, and how it supports trust without overwhelming the finance UI.
+
+[prompt 63]
+Add a Visual QA Checklist for light and dark themes. Check contrast, cards, buttons, forms, tables, links, screenshots, and mobile layout in both themes.
+
+[prompt 64]
+Add a Mobile Navigation QA pass. Test every page at narrow width, confirm menu behavior, theme toggle position, text wrapping, and tap target sizes.
+
+[prompt 65]
+Add Calculator Error and Edge Case QA. Test empty fields, zero values, large values, decimal values, negative values, reset behavior, and privacy language.
+
+[prompt 66]
+Add a No-JavaScript Fallback Review. Ensure core page content is visible without JavaScript and document which enhancements need JavaScript.
+
+[prompt 67]
+Add a Performance Budget and Asset Optimization pass. Check image sizes, SVG usage, CSS size, no external dependencies, and GitHub Pages load speed.
+
+[prompt 68]
+Add print-friendly guide styling. Make guide articles readable when printed or saved to PDF.
+
+[prompt 69]
+Add an Open Graph Image and Social Preview refresh. Ensure the social preview matches the mature blue dragon identity and works in light/dark marketing contexts.
+
+[prompt 70]
+Add broader schema coverage for roadmap, guides, calculator, advisor preview, and organization pages. Keep schema truthful and aligned with visible content.
+
+[prompt 71]
+Add a Content Freshness Review schedule. Define monthly review tasks for status labels, roadmap, sitemap dates, privacy text, and pricing claims.
+
+[prompt 72]
+Add a Competitive Positioning page. Explain how Dragon Budget differs from bank balance views, spreadsheets, subscription trackers, and broad budgeting apps without unfair claims.
+
+[prompt 73]
+Add a Founder Build Log page. Make the project feel active with dated notes, transparent progress, and no fake traction.
+
+[prompt 74]
+Add a complete internal link graph pass. Make sure every high-value page links naturally to the calculator, roadmap, advisor preview, privacy, and relevant guides.
+
+[prompt 75]
+Add a final Launch Day Checklist page. Include DNS, HTTPS, GitHub Pages settings, sitemap submission, social posts, feedback collection, analytics/privacy update, and post-launch audit.

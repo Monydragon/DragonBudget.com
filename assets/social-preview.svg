@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Dragon Budget social preview</title>
+  <desc id="desc">A mature blue dragon beside a Dragon Budget safe-to-spend preview card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.58" stop-color="#12315c"/>
+      <stop offset="1" stop-color="#0f8b8d"/>
+    </linearGradient>
+    <linearGradient id="scale" x1="670" x2="1090" y1="85" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46d9ff"/>
+      <stop offset="0.34" stop-color="#2f8cff"/>
+      <stop offset="1" stop-color="#12315c"/>
+    </linearGradient>
+    <linearGradient id="horn" x1="805" x2="1015" y1="52" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5f8ff"/>
+      <stop offset="1" stop-color="#8ca6c7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="26" flood-color="#020712" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="56" y="58" width="1088" height="514" rx="28" fill="#f6faff" filter="url(#softShadow)"/>
+  <rect x="88" y="90" width="1024" height="450" rx="22" fill="#ffffff" stroke="#d8e4f0" stroke-width="2"/>
+
+  <text x="128" y="172" fill="#12315c" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Dragon Budget</text>
+  <text x="128" y="248" fill="#12315c" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Know what is safe</text>
+  <text x="128" y="312" fill="#12315c" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">to spend today.</text>
+  <text x="130" y="372" fill="#58708c" font-family="Arial, Helvetica, sans-serif" font-size="30">Static calculator now. Mature budgeting app planned.</text>
+
+  <rect x="128" y="422" width="210" height="60" rx="10" fill="#1f6fd2"/>
+  <text x="233" y="462" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" text-anchor="middle">Free calculator</text>
+  <rect x="358" y="422" width="196" height="60" rx="10" fill="#fff9ec" stroke="#f6b84b" stroke-width="2"/>
+  <text x="456" y="462" fill="#221600" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" text-anchor="middle">Local-first</text>
+
+  <rect x="612" y="126" width="240" height="326" rx="24" fill="#0d1b2e" stroke="#24405e" stroke-width="2"/>
+  <rect x="638" y="162" width="188" height="250" rx="18" fill="#132a45"/>
+  <text x="666" y="210" fill="#dbe9f8" font-family="Arial, Helvetica, sans-serif" font-size="21">Safe to spend</text>
+  <text x="666" y="282" fill="#37d67a" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800">$237</text>
+  <rect x="666" y="324" width="130" height="12" rx="6" fill="#24405e"/>
+  <rect x="666" y="324" width="88" height="12" rx="6" fill="#37d67a"/>
+  <text x="666" y="382" fill="#dbe9f8" font-family="Arial, Helvetica, sans-serif" font-size="22">before payday</text>
+
+  <path d="M814 105 735 42l34 122 45-59Zm124-20 80-74-25 132-55-58Z" fill="url(#horn)"/>
+  <path d="M745 268c22-104 101-171 211-172 56 0 104 20 139 55-47 0-86 14-119 39 63 10 110 42 142 95-69-20-128-14-177 22 33 7 64 23 94 47-66 16-126 6-181-27-7 37-27 73-63 108-3-57-18-102-46-167Z" fill="url(#scale)" stroke="#8edfff" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M817 229c32-44 80-71 145-79-27 21-45 50-54 88 34-27 73-39 118-37-38 20-67 46-87 81 41-11 80-7 117 11-52 5-95 19-130 42-42-16-79-51-109-106Z" fill="#07111f" opacity="0.48"/>
+  <path d="M863 238c25-17 56-24 93-23-19 14-33 33-42 55 28-11 57-13 88-6-40 12-72 29-95 52-30-16-45-42-44-78Z" fill="#d6f7ff" opacity="0.92"/>
+  <path d="M918 266c22-2 42 3 60 15-21 2-39 7-55 17l-5-32Z" fill="#07111f"/>
+  <path d="M978 347c-52 22-109 23-171 2 44 45 96 60 159 50 19-3 31-21 25-39l-13-13Z" fill="#07111f" opacity="0.76"/>
+  <path d="M787 430c49 39 113 56 194 51-75 45-155 47-240 5l46-56Z" fill="#173b5f" stroke="#46d9ff" stroke-width="4"/>
+  <path d="M709 270c-34 15-60 38-77 71 41-16 82-19 121-11l-44-60Z" fill="#1d5eaa" stroke="#46d9ff" stroke-width="4"/>
+  <path d="M1052 162c33 1 63 13 90 35-36 1-68 9-96 24l6-59Z" fill="#1d5eaa" stroke="#46d9ff" stroke-width="4"/>
+</svg>

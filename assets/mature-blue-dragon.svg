@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Mature blue dragon guardian mascot</title>
+  <desc id="desc">A sleek mature blue dragon head with angular horns and icy blue highlights.</desc>
+  <defs>
+    <linearGradient id="scale" x1="150" x2="500" y1="110" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46d9ff"/>
+      <stop offset="0.34" stop-color="#2f8cff"/>
+      <stop offset="1" stop-color="#12315c"/>
+    </linearGradient>
+    <linearGradient id="horn" x1="250" x2="430" y1="70" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5f8ff"/>
+      <stop offset="1" stop-color="#8ca6c7"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="640" rx="96" fill="#07111f"/>
+  <circle cx="322" cy="326" r="228" fill="#0d1b2e" stroke="#24405e" stroke-width="4"/>
+  <path d="M248 139 168 66l35 126 45-53Zm124-18 79-82-26 139-53-57Z" fill="url(#horn)"/>
+  <path d="M184 286c22-107 101-177 213-178 56 0 104 21 139 57-47 0-86 14-119 40 64 10 112 43 144 98-70-22-130-15-179 22 33 7 64 23 94 48-66 16-126 6-181-28-7 38-28 75-64 111-2-58-18-104-47-170Z" fill="url(#scale)" stroke="#8edfff" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M257 247c32-46 81-74 146-82-27 22-44 52-53 91 34-28 73-41 119-38-38 20-67 48-87 84 41-11 80-8 117 11-52 5-96 19-132 43-42-16-78-52-110-109Z" fill="#0a1830" opacity="0.48"/>
+  <path d="M304 258c25-18 56-26 93-24-19 15-33 34-42 57 28-12 57-14 88-6-40 12-72 30-96 54-30-17-45-44-43-81Z" fill="#d6f7ff" opacity="0.92"/>
+  <path d="M358 287c22-2 42 3 60 15-21 2-39 7-55 17l-5-32Z" fill="#07111f"/>
+  <path d="M421 371c-52 23-110 24-173 2 44 46 97 62 161 51 19-3 31-22 25-40l-13-13Z" fill="#07111f" opacity="0.75"/>
+  <path d="M231 459c50 41 115 59 196 53-76 47-157 49-243 5l47-58Z" fill="#173b5f" stroke="#46d9ff" stroke-width="4"/>
+  <path d="M153 289c-35 15-61 39-78 73 42-16 83-20 123-12l-45-61Z" fill="#1d5eaa" stroke="#46d9ff" stroke-width="4"/>
+  <path d="M491 178c33 1 63 13 90 36-36 1-68 9-96 24l6-60Z" fill="#1d5eaa" stroke="#46d9ff" stroke-width="4"/>
+  <path d="M213 211c46-66 106-100 181-101" fill="none" stroke="#46d9ff" stroke-width="7" stroke-linecap="round" opacity="0.65" filter="url(#glow)"/>
+</svg>

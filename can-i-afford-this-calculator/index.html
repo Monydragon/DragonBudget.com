@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Can I Afford This Calculator | Dragon Budget</title>
+  <meta name="description" content="Use Dragon Budget's free browser-based calculator to estimate safe-to-spend money and decide whether a purchase fits your current budget.">
+  <link rel="canonical" href="https://dragonbudget.com/can-i-afford-this-calculator/">
+  <meta property="og:title" content="Can I Afford This Calculator">
+  <meta property="og:description" content="Estimate your safe-to-spend amount before you buy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dragonbudget.com/can-i-afford-this-calculator/">
+  <meta property="og:image" content="https://dragonbudget.com/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can I Afford This Calculator">
+  <meta name="twitter:description" content="Estimate your safe-to-spend amount before you buy.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Can I Afford This Calculator",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://dragonbudget.com/can-i-afford-this-calculator/",
+    "description": "A free browser-based tool that estimates safe-to-spend money from income, bills, planned expenses, savings goals, emergency buffer, and a purchase amount.",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Dragon Budget home">
+        <img src="../assets/dragon-budget-logo.svg" alt="" width="40" height="40">
+        <span>Dragon Budget</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../how-it-works/index.html">How It Works</a>
+        <a href="../can-i-afford-this-calculator/index.html" aria-current="page">Calculator</a>
+        <a href="../dragon-budget-vs-budgeting-apps/index.html">Compare</a>
+        <a href="../pricing/index.html">Pricing</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../guides/index.html">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero sub-hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Free browser-only tool</p>
+          <h1>Can I afford this calculator</h1>
+          <p class="lead">Estimate your safe-to-spend amount and see whether a purchase leaves enough room after bills, plans, savings, and your chosen buffer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="calculator-heading">
+      <div class="container">
+        <h2 id="calculator-heading">Enter your numbers</h2>
+        <p class="section-intro">All calculations happen in your browser. This static page does not store your financial inputs or send them to a server.</p>
+        <div class="panel" aria-label="Calculator example presets">
+          <h3>Try a scenario</h3>
+          <p>Load sample numbers for common situations. Presets only fill the form in your browser.</p>
+          <div class="pill-row">
+            <button class="button secondary" type="button" data-calculator-preset='{"current-balance":780,"upcoming-income":200,"bills-due":420,"planned-expenses":180,"savings-goal":75,"emergency-buffer":120,"purchase-amount":90}'>Between paychecks</button>
+            <button class="button secondary" type="button" data-calculator-preset='{"current-balance":420,"upcoming-income":0,"bills-due":300,"planned-expenses":65,"savings-goal":0,"emergency-buffer":50,"purchase-amount":45}'>Dinner tonight</button>
+            <button class="button secondary" type="button" data-calculator-preset='{"current-balance":1600,"upcoming-income":0,"bills-due":1200,"planned-expenses":180,"savings-goal":100,"emergency-buffer":150,"purchase-amount":250}'>Upcoming rent</button>
+            <button class="button secondary" type="button" data-calculator-preset='{"current-balance":980,"upcoming-income":500,"bills-due":620,"planned-expenses":220,"savings-goal":100,"emergency-buffer":200,"purchase-amount":320}'>Weekend event</button>
+            <button class="button secondary" type="button" data-calculator-preset='{"current-balance":310,"upcoming-income":250,"bills-due":390,"planned-expenses":90,"savings-goal":0,"emergency-buffer":50,"purchase-amount":35}'>Low buffer month</button>
+          </div>
+        </div>
+        <div class="calculator-layout">
+          <form class="tool-panel" id="affordability-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="current-balance">Current balance</label>
+                <input id="current-balance" name="current-balance" type="number" min="0" step="0.01" inputmode="decimal" placeholder="780.00" required>
+              </div>
+              <div class="field">
+                <label for="upcoming-income">Upcoming income before next pay period</label>
+                <input id="upcoming-income" name="upcoming-income" type="number" min="0" step="0.01" inputmode="decimal" placeholder="200.00" required>
+              </div>
+              <div class="field">
+                <label for="bills-due">Bills due before next pay period</label>
+                <input id="bills-due" name="bills-due" type="number" min="0" step="0.01" inputmode="decimal" placeholder="420.00" required>
+              </div>
+              <div class="field">
+                <label for="planned-expenses">Planned expenses</label>
+                <input id="planned-expenses" name="planned-expenses" type="number" min="0" step="0.01" inputmode="decimal" placeholder="180.00" required>
+              </div>
+              <div class="field">
+                <label for="savings-goal">Savings goal contribution</label>
+                <input id="savings-goal" name="savings-goal" type="number" min="0" step="0.01" inputmode="decimal" placeholder="75.00" required>
+              </div>
+              <div class="field">
+                <label for="emergency-buffer">Emergency buffer</label>
+                <input id="emergency-buffer" name="emergency-buffer" type="number" min="0" step="0.01" inputmode="decimal" placeholder="120.00" required>
+              </div>
+              <div class="field">
+                <label for="purchase-amount">Purchase amount</label>
+                <input id="purchase-amount" name="purchase-amount" type="number" min="0" step="0.01" inputmode="decimal" placeholder="90.00" required>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="submit">Calculate</button>
+              <button class="button secondary" type="reset">Clear</button>
+            </div>
+            <p class="note warning" id="calculator-error" aria-live="polite"></p>
+          </form>
+
+          <aside class="result-panel" aria-labelledby="result-heading">
+            <h2 id="result-heading">Your result</h2>
+            <p>Status</p>
+            <div class="result-status" id="decision-status" aria-live="polite">Enter numbers</div>
+            <p>Estimated safe to spend</p>
+            <div class="result-number" id="safe-to-spend-output">$0.00</div>
+            <p>Remaining after purchase</p>
+            <div class="result-number" id="remaining-output">$0.00</div>
+            <p id="decision-explanation">Your result will appear here. Calculations stay in this browser session.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="logic-heading">
+      <div class="container grid two">
+        <div>
+          <h2 id="logic-heading">Decision rules</h2>
+          <ul class="plain-list">
+            <li><strong>Yes:</strong> remaining after purchase is $25 or more.</li>
+            <li><strong>Maybe:</strong> remaining after purchase is at least $0 but less than $25.</li>
+            <li><strong>No:</strong> remaining after purchase is below $0.</li>
+          </ul>
+        </div>
+        <div class="note">
+          <h3>Privacy note</h3>
+          <p>This calculator is static JavaScript. It does not create an account, connect to your bank, store your entries, or transmit your entries by default.</p>
+          <p>Dragon Budget is a budgeting aid, not financial advice.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Dragon Budget</strong><p>Can I afford this? Get your safe-to-spend today.</p></div>
+      <div><h2>Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="../how-it-works/index.html">How It Works</a><a href="../guides/index.html">Guides</a><a href="../changelog/index.html">Changelog</a></nav></div>
+      <div><h2>Trust</h2><nav class="footer-links" aria-label="Trust navigation"><a href="../about/index.html">About</a><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div>
+    </div>
+    <div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

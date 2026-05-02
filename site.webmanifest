@@ -1,0 +1,17 @@
+{
+  "name": "Dragon Budget",
+  "short_name": "Dragon Budget",
+  "description": "Can I afford this? Get your safe-to-spend today.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#12315c",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

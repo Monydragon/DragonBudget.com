@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dragon Advisor Preview | Dragon Budget</title>
+  <meta name="description" content="Preview Dragon Advisor, a planned local-data budgeting assistant that explains safe-to-spend, bills, subscriptions, and purchase decisions with cited entries.">
+  <link rel="canonical" href="https://dragonbudget.com/advisor/">
+  <meta property="og:title" content="Dragon Advisor Preview">
+  <meta property="og:description" content="A planned budgeting advisor that explains calculations and cites the entries it used.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dragonbudget.com/advisor/">
+  <meta property="og:image" content="https://dragonbudget.com/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dragon Advisor",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "url": "https://dragonbudget.com/advisor/",
+    "description": "A planned Dragon Budget advisor experience that answers budgeting questions using local budget entries and cited calculations.",
+    "isPartOf": {"@type": "SoftwareApplication", "name": "Dragon Budget"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Dragon Budget home"><img src="../assets/dragon-budget-logo.svg" alt="" width="40" height="40"><span>Dragon Budget</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../how-it-works/index.html">How It Works</a>
+        <a href="../can-i-afford-this-calculator/index.html">Calculator</a>
+        <a href="../advisor/index.html" aria-current="page">Advisor</a>
+        <a href="../roadmap/index.html">Roadmap</a>
+        <a href="../guides/index.html">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero sub-hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Prompt 17 implemented</p>
+          <h1>Dragon Advisor preview</h1>
+          <p class="lead">Dragon Advisor is planned as a budgeting assistant that explains calculations using your local entries. It should not be a generic chatbot, and it should cite the bills, balances, subscriptions, and goals behind its answer.</p>
+          <div class="hero-actions">
+            <a class="button gold" href="../can-i-afford-this-calculator/index.html">Try the calculator</a>
+            <a class="button secondary" href="../roadmap/index.html">View app roadmap</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="advisor-demo-heading">
+      <div class="container advisor-layout">
+        <aside class="panel">
+          <div class="advisor-avatar" aria-hidden="true"><div class="advisor-mark"></div></div>
+          <h2 id="advisor-demo-heading">Ask a sample question</h2>
+          <p>These are static sample answers that show the intended behavior. The live MVP should run from user-entered local data.</p>
+          <div class="advisor-questions">
+            <button class="advisor-question" type="button" data-advisor-question="safe">Why is my safe-to-spend low?</button>
+            <button class="advisor-question" type="button" data-advisor-question="cancel">What can I review or cancel?</button>
+            <button class="advisor-question" type="button" data-advisor-question="dinner">Can I afford dinner tonight?</button>
+            <button class="advisor-question" type="button" data-advisor-question="changed">What changed from last month?</button>
+          </div>
+        </aside>
+
+        <section class="result-panel advisor-answer" data-advisor-panel aria-live="polite">
+          <p class="eyebrow">Sample advisor answer</p>
+          <h2 data-advisor-title>Why is my safe-to-spend low?</h2>
+          <p data-advisor-answer></p>
+          <h3>Entries cited</h3>
+          <ul class="citation-list" data-advisor-citations></ul>
+          <div class="note warning">
+            <p>Dragon Advisor should explain budget entries. It should not present output as financial advice or pretend to know data the user did not enter.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="advisor-rules">
+      <div class="container">
+        <h2 id="advisor-rules">Advisor rules for the MVP</h2>
+        <div class="grid three">
+          <article class="panel"><h3>Cite the inputs</h3><p>Answers should name the bills, subscriptions, balances, goals, and planned items used in the calculation.</p></article>
+          <article class="panel"><h3>Explain the math</h3><p>Safe-to-spend, cash-flow, and affordability answers should show the reasoning in plain language.</p></article>
+          <article class="panel"><h3>Stay grounded</h3><p>If data is missing, the advisor should say what is missing and offer a next step instead of guessing.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Dragon Budget</strong><p>Can I afford this? Get your safe-to-spend today.</p></div>
+      <div><h2>Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="../can-i-afford-this-calculator/index.html">Calculator</a><a href="../roadmap/index.html">Roadmap</a><a href="../design-direction/index.html">Design Direction</a><a href="../launch-plan/index.html">Launch Plan</a></nav></div>
+      <div><h2>Trust</h2><nav class="footer-links" aria-label="Trust navigation"><a href="../about/index.html">About</a><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div>
+    </div>
+    <div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

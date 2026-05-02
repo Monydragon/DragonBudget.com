@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dragon Budget Launch Plan | GitHub Pages Checklist</title>
+  <meta name="description" content="Launch checklist for Dragon Budget: GitHub Pages root deployment, custom domain, HTTPS, sitemap submission, validation, feedback, and polish tasks.">
+  <link rel="canonical" href="https://dragonbudget.com/launch-plan/">
+  <meta property="og:title" content="Dragon Budget Launch Plan">
+  <meta property="og:description" content="Deployment, validation, and launch checklist for Dragon Budget.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://dragonbudget.com/launch-plan/">
+  <meta property="og:image" content="https://dragonbudget.com/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap"><a class="brand" href="../index.html" aria-label="Dragon Budget home"><img src="../assets/dragon-budget-logo.svg" alt="" width="40" height="40"><span>Dragon Budget</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">☰</button><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../how-it-works/index.html">How It Works</a><a href="../can-i-afford-this-calculator/index.html">Calculator</a><a href="../advisor/index.html">Advisor</a><a href="../roadmap/index.html">Roadmap</a><a href="../launch-plan/index.html" aria-current="page">Launch</a></nav></div></header>
+  <main id="main">
+    <section class="hero page-hero sub-hero"><div class="container"><div class="hero-content"><p class="eyebrow">Prompt 20 implemented</p><h1>Launch plan</h1><p class="lead">Use this checklist to move Dragon Budget from local static files to a public GitHub Pages site with crawlable content, a working custom domain, and a feedback loop.</p></div></div></section>
+    <section class="section" aria-labelledby="deploy-heading">
+      <div class="container grid two">
+        <div>
+          <h2 id="deploy-heading">GitHub Pages deployment</h2>
+          <ol class="number-list">
+            <li>Commit the root static files and the `docs` source documents.</li>
+            <li>In GitHub Pages settings, publish from the main branch repository root.</li>
+            <li>Keep the root `CNAME` file set to `DragonBudget.com`.</li>
+            <li>Configure DNS for the custom domain and enable HTTPS when GitHub allows it.</li>
+            <li>Confirm `https://dragonbudget.com/robots.txt` and `https://dragonbudget.com/sitemap.xml` load.</li>
+          </ol>
+        </div>
+        <div class="note">
+          <h3>Root publish reminder</h3>
+          <p>The site no longer publishes from `/docs`. The `docs` folder now contains source planning files and prompt tracking.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section alt" aria-labelledby="checklist-heading">
+      <div class="container">
+        <h2 id="checklist-heading">Launch checklist</h2>
+        <div class="checklist">
+          <label><input type="checkbox"> Custom domain resolves to GitHub Pages.</label>
+          <label><input type="checkbox"> HTTPS is active.</label>
+          <label><input type="checkbox"> Sitemap submitted to Google Search Console and Bing Webmaster Tools.</label>
+          <label><input type="checkbox"> Calculator tested on desktop and mobile widths.</label>
+          <label><input type="checkbox"> Structured data checked with a validation tool after deployment.</label>
+          <label><input type="checkbox"> First feedback post published with a link to the calculator.</label>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><strong>Dragon Budget</strong><p>Can I afford this? Get your safe-to-spend today.</p></div><div><h2>Explore</h2><nav class="footer-links" aria-label="Footer navigation"><a href="../advisor/index.html">Advisor</a><a href="../roadmap/index.html">Roadmap</a><a href="../design-direction/index.html">Design Direction</a><a href="../changelog/index.html">Changelog</a></nav></div><div><h2>Trust</h2><nav class="footer-links" aria-label="Trust navigation"><a href="../about/index.html">About</a><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div></div><div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>

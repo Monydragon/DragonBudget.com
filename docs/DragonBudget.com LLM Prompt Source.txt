@@ -118,6 +118,8 @@ Structured Workflow:
 [validation: calculator and demos avoid negative currency displays] - Implemented
 [validation: public app preview uses one top menu and positive outflow labels] - Implemented
 [validation: generated fantasy blue dragon head PNG is used for favicon, manifest, header mark, and mascot/advisor references] - Implemented
+[validation: GitHub Pages DNS records and HTTPS certificate validate for apex and www] - Implemented
+[validation: HTTP redirects to HTTPS after deployment] - Partially Implemented - GitHub Pages Enforce HTTPS or Cloudflare Always Use HTTPS must be enabled in the external dashboard.
 [validation: external distribution and search-console submission] - Implemented - Static setup checklist created; final account actions are performed after deployment.
 
 Notes:
@@ -127,6 +129,8 @@ Notes:
 - The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
 - Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
 - Prompt 76 now uses a generated fantasy blue dragon-head PNG for the favicon, manifest icons, header mark, mascot usage, and advisor references; it also removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
+- Navigation follow-up: all public pages now cache-bust style.css and script.js with a nav-fix version; CSS hides stale quick-nav rows and JavaScript removes any extra header nav so only the primary top navigation remains.
+- HTTPS follow-up: DNS and the Let's Encrypt certificate validate for dragonbudget.com and www.dragonbudget.com; the remaining dashboard task is enabling HTTPS enforcement so HTTP redirects to HTTPS.
 
 Generated Prompt Details:
 

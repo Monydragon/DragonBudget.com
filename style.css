@@ -121,6 +121,17 @@ a:hover {
   backdrop-filter: blur(10px);
 }
 
+.site-header .standard-quick-nav,
+.site-header .quick-nav,
+.site-header .secondary-nav,
+.site-header .sub-nav,
+.site-header .subnav,
+.site-header .nav-row,
+.site-header > nav:not(.site-nav),
+.site-header .nav-wrap + nav {
+  display: none !important;
+}
+
 .nav-wrap,
 .container {
   width: min(1120px, calc(100% - 32px));

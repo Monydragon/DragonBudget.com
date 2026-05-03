@@ -43,6 +43,24 @@ function escapeHtml(value) {
 
 applyTheme(readSavedTheme() || "light");
 
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+  siteHeader
+    .querySelectorAll(".standard-quick-nav, .quick-nav, .secondary-nav, .sub-nav, .subnav, .nav-row")
+    .forEach((node) => node.remove());
+
+  let keptPrimaryNav = false;
+  siteHeader.querySelectorAll("nav").forEach((nav) => {
+    if (nav.classList.contains("site-nav") && !keptPrimaryNav) {
+      keptPrimaryNav = true;
+      return;
+    }
+
+    nav.remove();
+  });
+}
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navWrap = document.querySelector(".nav-wrap");
@@ -309,7 +327,7 @@ if (advisorPanel) {
     changed: {
       title: "What changed from last month?",
       answer:
-        "A mature advisor should summarize changes plainly: income timing, new bills, subscription increases, and category spending shifts. The static site previews that behavior without pretending live account data exists.",
+        "A mature advisor should summarize changes plainly: income timing, new bills, subscription increases, and category spending shifts. The public site previews that behavior without pretending live account data exists.",
       citations: [
         "Cash Flow screen: planned monthly timeline",
         "Reports screen: planned month-over-month summary",

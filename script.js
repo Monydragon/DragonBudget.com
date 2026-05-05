@@ -43,6 +43,99 @@ function escapeHtml(value) {
 
 applyTheme(readSavedTheme() || "light");
 
+const primaryNavItems = [
+  ["home", "index.html", "Home"],
+  ["how-it-works", "how-it-works/index.html", "How It Works"],
+  ["calculator", "can-i-afford-this-calculator/index.html", "Calculator"],
+  ["alpha", "alpha/index.html", "Alpha"],
+  ["advisor", "advisor/index.html", "Advisor"],
+  ["roadmap", "roadmap/index.html", "Roadmap"],
+  ["compare", "dragon-budget-vs-budgeting-apps/index.html", "Compare"],
+  ["guides", "guides/index.html", "Guides"],
+];
+
+function rootRelativePrefix() {
+  const scriptNode =
+    document.currentScript ||
+    [...document.scripts].find((script) => /script\.js(?:\?|$)/.test(script.src));
+
+  if (!scriptNode?.src) return "";
+
+  const scriptUrl = new URL(scriptNode.src, window.location.href);
+  const pageUrl = new URL(window.location.href);
+  const rootPath = scriptUrl.pathname.replace(/\/script\.js$/, "/");
+  const pageDirectory = pageUrl.pathname.endsWith("/")
+    ? pageUrl.pathname
+    : pageUrl.pathname.replace(/[^/]*$/, "");
+
+  if (!pageDirectory.startsWith(rootPath)) return "";
+
+  const routeDirectory = pageDirectory
+    .slice(rootPath.length)
+    .replace(/^\/+|\/+$/g, "");
+
+  if (!routeDirectory) return "";
+
+  return "../".repeat(routeDirectory.split("/").filter(Boolean).length);
+}
+
+function currentNavKey() {
+  const scriptNode =
+    document.currentScript ||
+    [...document.scripts].find((script) => /script\.js(?:\?|$)/.test(script.src));
+
+  if (!scriptNode?.src) return null;
+
+  const scriptUrl = new URL(scriptNode.src, window.location.href);
+  const pageUrl = new URL(window.location.href);
+  const rootPath = scriptUrl.pathname.replace(/\/script\.js$/, "/");
+
+  if (!pageUrl.pathname.startsWith(rootPath)) return null;
+
+  const route = pageUrl.pathname
+    .slice(rootPath.length)
+    .replace(/\/?index\.html$/, "")
+    .replace(/^\/+|\/+$/g, "");
+
+  if (!route) return "home";
+
+  const firstSegment = route.split("/")[0];
+  const activeRoutes = {
+    "how-it-works": "how-it-works",
+    "can-i-afford-this-calculator": "calculator",
+    alpha: "alpha",
+    advisor: "advisor",
+    "advisor-methodology": "advisor",
+    roadmap: "roadmap",
+    "dragon-budget-vs-budgeting-apps": "compare",
+    "competitive-positioning": "compare",
+    guides: "guides",
+  };
+
+  return activeRoutes[firstSegment] || null;
+}
+
+function navHref(prefix, path) {
+  if (prefix) return `${prefix}${path}`;
+  return path === "index.html" ? "./index.html" : path;
+}
+
+function standardizePrimaryNav() {
+  const siteNav = document.querySelector(".site-nav");
+  if (!siteNav) return;
+
+  const prefix = rootRelativePrefix();
+  const activeKey = currentNavKey();
+  siteNav.id = "site-nav";
+  siteNav.setAttribute("aria-label", "Main navigation");
+  siteNav.innerHTML = primaryNavItems
+    .map(([key, path, label]) => {
+      const current = key === activeKey ? ' aria-current="page"' : "";
+      return `<a href="${navHref(prefix, path)}"${current}>${label}</a>`;
+    })
+    .join("");
+}
+
 const siteHeader = document.querySelector(".site-header");
 
 if (siteHeader) {
@@ -59,6 +152,8 @@ if (siteHeader) {
 
     nav.remove();
   });
+
+  standardizePrimaryNav();
 }
 
 const navToggle = document.querySelector(".nav-toggle");

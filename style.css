@@ -645,6 +645,10 @@ p {
   margin-top: 1.4rem;
 }
 
+.download-note {
+  margin-top: 1.2rem;
+}
+
 .choice-group {
   display: flex;
   flex-wrap: wrap;

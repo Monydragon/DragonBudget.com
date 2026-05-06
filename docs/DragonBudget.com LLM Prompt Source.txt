@@ -104,6 +104,7 @@ Structured Workflow:
 [prompt 77] - Implemented - Keep Primary Navigation Consistent Across Every Page and Capture Before/After Renders
 [prompt 78] - Implemented - Add Alpha Survey Page for Device, Platform, Browser, and Tester Feedback
 [prompt 79] - Implemented - Update Site Owner to Monydragon LLC and Add Structured Support Ticket Form
+[prompt 80] - Implemented - Add Alpha Release Downloads Page Linked to Google Drive Builds
 
 [validation: site loads by opening index.html] - Implemented
 [validation: custom domain CNAME present] - Implemented
@@ -127,6 +128,7 @@ Structured Workflow:
 [validation: alpha survey page sends structured tester feedback to alpha@dragonbudget.com] - Implemented
 [validation: public footer copyright names Monydragon LLC] - Implemented
 [validation: support ticket form sends structured bug reports and feedback to support@dragonbudget.com] - Implemented
+[validation: alpha downloads page exposes Windows, Linux, MacOSX, and Android release access] - Implemented
 [validation: GitHub Pages DNS records and HTTPS certificate validate for apex and www] - Implemented
 [validation: HTTP redirects to HTTPS after deployment] - Partially Implemented - GitHub Pages Enforce HTTPS or Cloudflare Always Use HTTPS must be enabled in the external dashboard.
 [validation: external distribution and search-console submission] - Implemented - Static setup checklist created; final account actions are performed after deployment.
@@ -134,7 +136,7 @@ Structured Workflow:
 Notes:
 - The prompt source is now the living implementation ledger. Status labels above should be updated whenever a page, workflow, or validation changes.
 - External account actions such as GitHub Pages settings, DNS verification, HTTPS confirmation, and Search Console submission are tracked in the launch pages because they cannot be completed from static files alone.
-- Prompts 22 through 79 expanded the site into a 64-page static product, guide, trust, launch, polish, feedback, support, and QA system with a complete human site map and matching XML sitemap.
+- Prompts 22 through 80 expanded the site into a 65-page static product, guide, trust, launch, polish, feedback, support, release, and QA system with a complete human site map and matching XML sitemap.
 - The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
 - Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
 - Prompt 76 now uses a generated fantasy blue dragon-head PNG for the favicon, manifest icons, header mark, mascot usage, and advisor references; it also removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
@@ -142,6 +144,7 @@ Notes:
 - Prompt 77 standardizes the primary navigation source and rendered output across every public page so Alpha and the other primary links do not disappear while browsing. The full render audit lives in screenshots/nav-before-all and screenshots/nav-after-all.
 - Prompt 78 adds a dedicated alpha survey page that asks what testers used and tested, including device type, platform, browser, screen or device model, overall clarity, useful parts, confusing parts, missing features, and follow-up permission. Responses are composed into an email to alpha@dragonbudget.com because the site remains static and no-backend.
 - Prompt 79 updates public footer and organization references to Monydragon LLC, upgrades the support page into a structured email-based ticket form for bugs and actionable feedback, and improves form dropdowns so Other selections reveal fields where users can explain in plain language.
+- Prompt 80 adds an Alpha Downloads page linked from the Early Alpha flow. It exposes Google Drive release access for Windows, Linux, MacOSX, and Android with ZIP and raw-file buttons for each platform. The Drive folder could not be enumerated anonymously from the local environment, so direct per-file links should replace the shared folder links when individual public file IDs are available.
 - Ongoing workflow: when a new DragonBudget.com task is completed, update this prompt source immediately with the next prompt number, implementation summary, relevant validation entries, and notes. This keeps the file usable as the fast working ledger for future prompts.
 - HTTPS follow-up: DNS and the Let's Encrypt certificate validate for dragonbudget.com and www.dragonbudget.com; the remaining dashboard task is enabling HTTPS enforcement so HTTP redirects to HTTPS.
 
@@ -335,3 +338,6 @@ Add an obvious alpha survey flow to DragonBudget.com. Create a dedicated alpha s
 
 [prompt 79]
 Update the public site owner and support workflow. Change the visible copyright owner from Dragon Lens Studios to Monydragon LLC. Add an easy support ticket system on the support page that sends structured bug reports, calculator questions, privacy requests, and actionable feedback to support@dragonbudget.com. Use dropdowns for ticket type, affected page or feature, impact, device, platform, and browser, with Other selections that reveal a specify field. Keep the forms simple for all skill levels and compose the answers into email because the site remains static.
+
+[prompt 80]
+Add easy Early Alpha release access after users join the alpha. Use the Google Drive release folder as the source of truth. Create an Alpha Downloads page that supports Windows, Linux, MacOSX, and Android, with ZIP and raw-file access links for each platform. Link the page prominently from the Early Alpha page after the join/tester flow, include support and feedback paths, update sitemap and site map entries, and keep status language honest about the shared Drive folder.

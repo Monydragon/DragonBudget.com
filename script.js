@@ -104,6 +104,7 @@ function currentNavKey() {
     "how-it-works": "how-it-works",
     "can-i-afford-this-calculator": "calculator",
     alpha: "alpha",
+    "alpha-downloads": "alpha",
     "alpha-survey": "alpha",
     advisor: "advisor",
     "advisor-methodology": "advisor",

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dragon Budget Alpha Survey | Tester Feedback</title>
+  <meta name="description" content="Take the Dragon Budget alpha survey and send feedback about device, platform, browser, calculator clarity, planned app features, and testing priorities.">
+  <link rel="canonical" href="https://dragonbudget.com/alpha-survey/">
+  <meta property="og:title" content="Dragon Budget Alpha Survey">
+  <meta property="og:description" content="Share useful alpha testing feedback for Dragon Budget.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dragonbudget.com/alpha-survey/">
+  <meta property="og:image" content="https://dragonbudget.com/assets/social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/dragon-head-icon.png" type="image/png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../style.css?v=20260505-alpha-survey">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Dragon Budget home">
+        <img src="../assets/dragon-head-icon.png" alt="" width="40" height="40">
+        <span>Dragon Budget</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../how-it-works/index.html">How It Works</a>
+        <a href="../can-i-afford-this-calculator/index.html">Calculator</a>
+        <a href="../alpha/index.html" aria-current="page">Alpha</a>
+        <a href="../advisor/index.html">Advisor</a>
+        <a href="../roadmap/index.html">Roadmap</a>
+        <a href="../dragon-budget-vs-budgeting-apps/index.html">Compare</a>
+        <a href="../guides/index.html">Guides</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero sub-hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Alpha feedback</p>
+          <h1>Take the alpha survey.</h1>
+          <p class="lead">Send practical feedback about what you tested, what device you used, which platform and browser you were on, and what would make Dragon Budget clearer.</p>
+          <div class="hero-actions">
+            <a class="button gold" href="#alpha-survey-form">Start survey</a>
+            <a class="button secondary" href="../can-i-afford-this-calculator/index.html">Try the calculator first</a>
+          </div>
+          <div class="status-line" aria-label="Survey destination">
+            <span>Sends to alpha@dragonbudget.com</span>
+            <span>No account required</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="survey-heading">
+      <div class="container">
+        <h2 id="survey-heading">Alpha tester questions</h2>
+        <p class="section-intro">The form opens a prepared email addressed to <strong>alpha@dragonbudget.com</strong>. Review the message in your email app before sending, and avoid bank logins, account numbers, or sensitive financial details.</p>
+        <noscript><p class="note">If the survey button does not open an email, send your device, platform, browser, what you tested, and feedback to <a href="mailto:alpha@dragonbudget.com">alpha@dragonbudget.com</a>.</p></noscript>
+        <form class="tool-panel survey-form" id="alpha-survey-form" data-alpha-survey novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="survey-name">Name</label>
+              <input id="survey-name" name="Name" type="text" autocomplete="name" placeholder="Optional">
+            </div>
+            <div class="field">
+              <label for="survey-email">Email</label>
+              <input id="survey-email" name="Email" type="email" autocomplete="email" placeholder="Optional">
+            </div>
+            <div class="field">
+              <label for="survey-device">Device type</label>
+              <select id="survey-device" name="Device type" required>
+                <option value="">Choose one</option>
+                <option>Mobile phone</option>
+                <option>Tablet</option>
+                <option>Laptop</option>
+                <option>Desktop</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="survey-platform">Platform</label>
+              <select id="survey-platform" name="Platform" required>
+                <option value="">Choose one</option>
+                <option>iOS</option>
+                <option>Android</option>
+                <option>Windows</option>
+                <option>macOS</option>
+                <option>Linux</option>
+                <option>ChromeOS</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="survey-browser">Browser</label>
+              <select id="survey-browser" name="Browser" required>
+                <option value="">Choose one</option>
+                <option>Chrome</option>
+                <option>Safari</option>
+                <option>Firefox</option>
+                <option>Edge</option>
+                <option>Samsung Internet</option>
+                <option>Brave</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="survey-screen">Screen size or device model</label>
+              <input id="survey-screen" name="Screen size or device model" type="text" placeholder="Example: iPhone 15, Pixel 8, 14-inch laptop">
+            </div>
+            <div class="field">
+              <label for="survey-area">What did you test?</label>
+              <select id="survey-area" name="What did you test?" required>
+                <option value="">Choose one</option>
+                <option>Safe-to-spend calculator</option>
+                <option>Alpha page or signup</option>
+                <option>Guides or education pages</option>
+                <option>Roadmap or planned features</option>
+                <option>Mobile navigation</option>
+                <option>Overall site impression</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="survey-rating">Overall clarity</label>
+              <select id="survey-rating" name="Overall clarity" required>
+                <option value="">Choose one</option>
+                <option>Very clear</option>
+                <option>Mostly clear</option>
+                <option>Somewhat confusing</option>
+                <option>Very confusing</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="survey-useful">What felt most useful?</label>
+              <textarea id="survey-useful" name="What felt most useful?" rows="4" placeholder="Tell me what helped or felt worth keeping."></textarea>
+            </div>
+            <div class="field full">
+              <label for="survey-confusing">What was confusing, missing, or broken?</label>
+              <textarea id="survey-confusing" name="What was confusing, missing, or broken?" rows="4" placeholder="Include the page, step, error, or wording that caused trouble."></textarea>
+            </div>
+            <div class="field full">
+              <label for="survey-feature">Which planned feature matters most to you?</label>
+              <textarea id="survey-feature" name="Most wanted planned feature" rows="3" placeholder="Examples: cash flow, subscriptions, bills, goals, event budgets, advisor explanations."></textarea>
+            </div>
+            <div class="field full">
+              <label for="survey-notes">Anything else I should know?</label>
+              <textarea id="survey-notes" name="Additional notes" rows="3" placeholder="Optional context, accessibility notes, device quirks, or follow-up permission."></textarea>
+            </div>
+          </div>
+          <fieldset class="choice-group">
+            <legend>May I contact you about this feedback?</legend>
+            <label><input type="radio" name="Follow-up permission" value="Yes, follow up"> Yes, follow up</label>
+            <label><input type="radio" name="Follow-up permission" value="No follow-up needed"> No follow-up needed</label>
+          </fieldset>
+          <p class="form-error" id="alpha-survey-error" role="alert"></p>
+          <div class="form-actions">
+            <button class="button gold" type="submit">Send survey email</button>
+            <button class="button secondary" type="reset">Clear answers</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="feedback-tips-heading">
+      <div class="container grid three">
+        <article class="panel">
+          <h2 id="feedback-tips-heading">Best feedback</h2>
+          <p>Specific device, platform, browser, page, and expected result details are more useful than a general opinion.</p>
+        </article>
+        <article class="panel">
+          <h2>Privacy boundary</h2>
+          <p>Share behavior and examples, but keep account numbers, bank logins, and private financial details out of the email.</p>
+        </article>
+        <article class="panel">
+          <h2>What happens next</h2>
+          <p>Feedback may shape calculator language, mobile layout, roadmap priorities, and the Early Alpha testing plan.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Dragon Budget</strong><p>Specific tester feedback beats guesswork.</p></div>
+      <div><h2>Explore</h2><nav class="footer-links"><a href="../alpha/index.html">Early Alpha</a><a href="../can-i-afford-this-calculator/index.html">Calculator</a><a href="../roadmap/index.html">Roadmap</a></nav></div>
+      <div><h2>Trust</h2><nav class="footer-links"><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div>
+    </div>
+    <div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div>
+  </footer>
+  <script src="../script.js?v=20260505-alpha-survey"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 DragonBudget.com LLM Prompt Source
-Last updated: 2026-05-02
+Last updated: 2026-05-05
 Build location: repository root
 Source plan files:
 - Dragon_Budget_AI_Static_Site_Action_Plan_and_Prompt_Pack.docx
@@ -23,6 +23,7 @@ Structured Workflow:
 5. Content: every page should answer its main question in the opening paragraph, then link to the calculator, roadmap, or related guide.
 6. Verification: after each prompt batch, check relative links, metadata uniqueness, sitemap XML, JSON-LD, and local serving.
 7. Launch: publish from repository root, confirm CNAME/HTTPS, submit sitemap, and collect feedback.
+8. Prompt Ledger: every new DragonBudget.com implementation prompt should update this file in the same pass unless explicitly skipped. Add the next prompt number, a short implemented status line, generated prompt details, validation notes, and any workflow notes needed for the next session.
 
 [prompt 1] - Implemented - Create the Static Site Skeleton
 [prompt 2] - Implemented - Write the Homepage
@@ -100,6 +101,8 @@ Structured Workflow:
 [prompt 74] - Implemented - Add Complete Internal Link Graph Pass
 [prompt 75] - Implemented - Add Final Launch Day Checklist Page
 [prompt 76] - Implemented - Add Generated Fantasy Blue Dragon Head PNG Icon, Single Top Menu, and Non-Negative Money Display Pass
+[prompt 77] - Implemented - Keep Primary Navigation Consistent Across Every Page and Capture Before/After Renders
+[prompt 78] - Implemented - Add Alpha Survey Page for Device, Platform, Browser, and Tester Feedback
 
 [validation: site loads by opening index.html] - Implemented
 [validation: custom domain CNAME present] - Implemented
@@ -118,6 +121,9 @@ Structured Workflow:
 [validation: calculator and demos avoid negative currency displays] - Implemented
 [validation: public app preview uses one top menu and positive outflow labels] - Implemented
 [validation: generated fantasy blue dragon head PNG is used for favicon, manifest, header mark, and mascot/advisor references] - Implemented
+[validation: primary navigation links remain consistent across all public HTML pages] - Implemented
+[validation: before and after desktop render captures exist for navbar verification] - Implemented
+[validation: alpha survey page sends structured tester feedback to alpha@dragonbudget.com] - Implemented
 [validation: GitHub Pages DNS records and HTTPS certificate validate for apex and www] - Implemented
 [validation: HTTP redirects to HTTPS after deployment] - Partially Implemented - GitHub Pages Enforce HTTPS or Cloudflare Always Use HTTPS must be enabled in the external dashboard.
 [validation: external distribution and search-console submission] - Implemented - Static setup checklist created; final account actions are performed after deployment.
@@ -125,11 +131,14 @@ Structured Workflow:
 Notes:
 - The prompt source is now the living implementation ledger. Status labels above should be updated whenever a page, workflow, or validation changes.
 - External account actions such as GitHub Pages settings, DNS verification, HTTPS confirmation, and Search Console submission are tracked in the launch pages because they cannot be completed from static files alone.
-- Prompts 22 through 76 expanded the site into a 62-page static product, guide, trust, launch, polish, and QA system with a complete human site map and matching XML sitemap.
+- Prompts 22 through 78 expanded the site into a 64-page static product, guide, trust, launch, polish, feedback, and QA system with a complete human site map and matching XML sitemap.
 - The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
 - Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
 - Prompt 76 now uses a generated fantasy blue dragon-head PNG for the favicon, manifest icons, header mark, mascot usage, and advisor references; it also removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
 - Navigation follow-up: all public pages now cache-bust style.css and script.js with a nav-fix version; CSS hides stale quick-nav rows and JavaScript removes any extra header nav so only the primary top navigation remains.
+- Prompt 77 standardizes the primary navigation source and rendered output across every public page so Alpha and the other primary links do not disappear while browsing. The full render audit lives in screenshots/nav-before-all and screenshots/nav-after-all.
+- Prompt 78 adds a dedicated alpha survey page that asks what testers used and tested, including device type, platform, browser, screen or device model, overall clarity, useful parts, confusing parts, missing features, and follow-up permission. Responses are composed into an email to alpha@dragonbudget.com because the site remains static and no-backend.
+- Ongoing workflow: when a new DragonBudget.com task is completed, update this prompt source immediately with the next prompt number, implementation summary, relevant validation entries, and notes. This keeps the file usable as the fast working ledger for future prompts.
 - HTTPS follow-up: DNS and the Let's Encrypt certificate validate for dragonbudget.com and www.dragonbudget.com; the remaining dashboard task is enabling HTTPS enforcement so HTTP redirects to HTTPS.
 
 Generated Prompt Details:
@@ -313,3 +322,9 @@ Add a final Launch Day Checklist page. Include DNS, HTTPS, GitHub Pages settings
 
 [prompt 76]
 Add a blue Dragon head properly fitted for an icon genetate this. Also look at this image there is some negative values and such which is incorrect, also there are 2 menu bars there should only be the top menu bar. let's fix that only the top one should show one navigational menu. also do a pass to make sure all of the pages reflect accordingly.
+
+[prompt 77]
+Fix the navbar drift across DragonBudget.com. The home page navigation is correct, but some internal pages drop Alpha and other primary routes. Standardize the primary navigation across every public page, add a shared JavaScript guardrail so copied pages cannot drift again, preserve local index.html links, and verify the fix with before and after render captures for each public screen.
+
+[prompt 78]
+Add an obvious alpha survey flow to DragonBudget.com. Create a dedicated alpha survey page linked from the Early Alpha page. Ask simple tester questions that collect what was tested, device type, platform, browser, screen or device model, clarity, what was useful, what was confusing or broken, most wanted planned feature, extra notes, and follow-up permission. Keep the site static by composing the answers into an email addressed to alpha@dragonbudget.com, and update sitemap and site map entries.

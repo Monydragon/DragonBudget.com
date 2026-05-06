@@ -104,6 +104,7 @@ function currentNavKey() {
     "how-it-works": "how-it-works",
     "can-i-afford-this-calculator": "calculator",
     alpha: "alpha",
+    "alpha-survey": "alpha",
     advisor: "advisor",
     "advisor-methodology": "advisor",
     roadmap: "roadmap",
@@ -187,6 +188,73 @@ if (navToggle && siteNav) {
 document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
+
+const alphaSurveyForm = document.querySelector("[data-alpha-survey]");
+
+if (alphaSurveyForm) {
+  const error = document.querySelector("#alpha-survey-error");
+
+  function fieldValue(name) {
+    const field = alphaSurveyForm.elements[name];
+    if (!field) return "";
+
+    if (field instanceof RadioNodeList) {
+      return field.value || "Not answered";
+    }
+
+    return field.value.trim() || "Not answered";
+  }
+
+  alphaSurveyForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (error) error.textContent = "";
+
+    const requiredFields = [...alphaSurveyForm.querySelectorAll("[required]")];
+    const missingField = requiredFields.find((field) => !field.value.trim());
+
+    if (missingField) {
+      if (error) error.textContent = "Please answer the required device, platform, browser, test area, and clarity questions.";
+      missingField.focus();
+      return;
+    }
+
+    const lines = [
+      "Dragon Budget Alpha Survey",
+      "",
+      `Name: ${fieldValue("Name")}`,
+      `Email: ${fieldValue("Email")}`,
+      `Device type: ${fieldValue("Device type")}`,
+      `Platform: ${fieldValue("Platform")}`,
+      `Browser: ${fieldValue("Browser")}`,
+      `Screen size or device model: ${fieldValue("Screen size or device model")}`,
+      `What did you test?: ${fieldValue("What did you test?")}`,
+      `Overall clarity: ${fieldValue("Overall clarity")}`,
+      `Follow-up permission: ${fieldValue("Follow-up permission")}`,
+      "",
+      "What felt most useful?",
+      fieldValue("What felt most useful?"),
+      "",
+      "What was confusing, missing, or broken?",
+      fieldValue("What was confusing, missing, or broken?"),
+      "",
+      "Which planned feature matters most?",
+      fieldValue("Most wanted planned feature"),
+      "",
+      "Anything else?",
+      fieldValue("Additional notes"),
+      "",
+      `Submitted from: ${window.location.href}`,
+    ];
+
+    const subject = encodeURIComponent("Dragon Budget Alpha Survey Feedback");
+    const body = encodeURIComponent(lines.join("\n"));
+    window.location.href = `mailto:alpha@dragonbudget.com?subject=${subject}&body=${body}`;
+  });
+
+  alphaSurveyForm.addEventListener("reset", () => {
+    if (error) error.textContent = "";
+  });
+}
 
 const calculatorForm = document.querySelector("#affordability-form");
 

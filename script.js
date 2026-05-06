@@ -189,28 +189,70 @@ document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
 
+function formFieldValue(form, name) {
+  const field = form.elements[name];
+  if (!field) return "Not answered";
+
+  if (field instanceof RadioNodeList) {
+    return field.value || "Not answered";
+  }
+
+  return field.value.trim() || "Not answered";
+}
+
+function formChoiceValue(form, name, otherName) {
+  const value = formFieldValue(form, name);
+  if (value !== "Other" || !otherName) return value;
+
+  return `Other - ${formFieldValue(form, otherName)}`;
+}
+
+function setupOtherFields(form) {
+  form.querySelectorAll("[data-other-for]").forEach((otherField) => {
+    const source = document.getElementById(otherField.dataset.otherFor);
+    const wrapper = otherField.closest(".field");
+
+    if (!source || !wrapper) return;
+
+    function syncOtherField() {
+      const isOther = source.value === "Other";
+      wrapper.classList.toggle("is-hidden", !isOther);
+      otherField.required = isOther;
+      if (!isOther) otherField.value = "";
+    }
+
+    if (otherField.dataset.otherReady !== "true") {
+      source.addEventListener("change", syncOtherField);
+      otherField.dataset.otherReady = "true";
+    }
+
+    syncOtherField();
+  });
+}
+
+function missingRequiredField(form) {
+  return [...form.querySelectorAll("[required]")].find((field) => {
+    if (field.offsetParent === null) return false;
+    return !field.value.trim();
+  });
+}
+
+function sendMail(to, subject, lines) {
+  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+}
+
+document.querySelectorAll("[data-alpha-survey], [data-support-ticket]").forEach(setupOtherFields);
+
 const alphaSurveyForm = document.querySelector("[data-alpha-survey]");
 
 if (alphaSurveyForm) {
   const error = document.querySelector("#alpha-survey-error");
 
-  function fieldValue(name) {
-    const field = alphaSurveyForm.elements[name];
-    if (!field) return "";
-
-    if (field instanceof RadioNodeList) {
-      return field.value || "Not answered";
-    }
-
-    return field.value.trim() || "Not answered";
-  }
-
   alphaSurveyForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (error) error.textContent = "";
 
-    const requiredFields = [...alphaSurveyForm.querySelectorAll("[required]")];
-    const missingField = requiredFields.find((field) => !field.value.trim());
+    const missingField = missingRequiredField(alphaSurveyForm);
 
     if (missingField) {
       if (error) error.textContent = "Please answer the required device, platform, browser, test area, and clarity questions.";
@@ -218,40 +260,90 @@ if (alphaSurveyForm) {
       return;
     }
 
-    const lines = [
+    sendMail("alpha@dragonbudget.com", "Dragon Budget Alpha Survey Feedback", [
       "Dragon Budget Alpha Survey",
       "",
-      `Name: ${fieldValue("Name")}`,
-      `Email: ${fieldValue("Email")}`,
-      `Device type: ${fieldValue("Device type")}`,
-      `Platform: ${fieldValue("Platform")}`,
-      `Browser: ${fieldValue("Browser")}`,
-      `Screen size or device model: ${fieldValue("Screen size or device model")}`,
-      `What did you test?: ${fieldValue("What did you test?")}`,
-      `Overall clarity: ${fieldValue("Overall clarity")}`,
-      `Follow-up permission: ${fieldValue("Follow-up permission")}`,
+      `Name: ${formFieldValue(alphaSurveyForm, "Name")}`,
+      `Email: ${formFieldValue(alphaSurveyForm, "Email")}`,
+      `Device type: ${formChoiceValue(alphaSurveyForm, "Device type", "Device type other")}`,
+      `Platform: ${formChoiceValue(alphaSurveyForm, "Platform", "Platform other")}`,
+      `Browser: ${formChoiceValue(alphaSurveyForm, "Browser", "Browser other")}`,
+      `Screen size or device model: ${formFieldValue(alphaSurveyForm, "Screen size or device model")}`,
+      `What did you test?: ${formChoiceValue(alphaSurveyForm, "What did you test?", "What did you test other")}`,
+      `Overall clarity: ${formFieldValue(alphaSurveyForm, "Overall clarity")}`,
+      `Follow-up permission: ${formFieldValue(alphaSurveyForm, "Follow-up permission")}`,
       "",
       "What felt most useful?",
-      fieldValue("What felt most useful?"),
+      formFieldValue(alphaSurveyForm, "What felt most useful?"),
       "",
       "What was confusing, missing, or broken?",
-      fieldValue("What was confusing, missing, or broken?"),
+      formFieldValue(alphaSurveyForm, "What was confusing, missing, or broken?"),
       "",
       "Which planned feature matters most?",
-      fieldValue("Most wanted planned feature"),
+      formFieldValue(alphaSurveyForm, "Most wanted planned feature"),
       "",
       "Anything else?",
-      fieldValue("Additional notes"),
+      formFieldValue(alphaSurveyForm, "Additional notes"),
       "",
       `Submitted from: ${window.location.href}`,
-    ];
-
-    const subject = encodeURIComponent("Dragon Budget Alpha Survey Feedback");
-    const body = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:alpha@dragonbudget.com?subject=${subject}&body=${body}`;
+    ]);
   });
 
   alphaSurveyForm.addEventListener("reset", () => {
+    window.setTimeout(() => setupOtherFields(alphaSurveyForm), 0);
+    if (error) error.textContent = "";
+  });
+}
+
+const supportTicketForm = document.querySelector("[data-support-ticket]");
+
+if (supportTicketForm) {
+  const error = document.querySelector("#support-ticket-error");
+
+  supportTicketForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (error) error.textContent = "";
+
+    const missingField = missingRequiredField(supportTicketForm);
+
+    if (missingField) {
+      if (error) error.textContent = "Please answer the required ticket type, page or feature, impact, device, platform, browser, and details fields.";
+      missingField.focus();
+      return;
+    }
+
+    sendMail("support@dragonbudget.com", "Dragon Budget Support Ticket", [
+      "Dragon Budget Support Ticket",
+      "",
+      `Name: ${formFieldValue(supportTicketForm, "Name")}`,
+      `Email: ${formFieldValue(supportTicketForm, "Email")}`,
+      `Ticket type: ${formChoiceValue(supportTicketForm, "Ticket type", "Ticket type other")}`,
+      `Page or feature: ${formChoiceValue(supportTicketForm, "Page or feature", "Page or feature other")}`,
+      `Impact: ${formFieldValue(supportTicketForm, "Impact")}`,
+      `Device type: ${formChoiceValue(supportTicketForm, "Device type", "Device type other")}`,
+      `Platform: ${formChoiceValue(supportTicketForm, "Platform", "Platform other")}`,
+      `Browser: ${formChoiceValue(supportTicketForm, "Browser", "Browser other")}`,
+      `Screen size or device model: ${formFieldValue(supportTicketForm, "Screen size or device model")}`,
+      `Can support follow up?: ${formFieldValue(supportTicketForm, "Follow-up permission")}`,
+      "",
+      "What happened?",
+      formFieldValue(supportTicketForm, "What happened?"),
+      "",
+      "What did you expect instead?",
+      formFieldValue(supportTicketForm, "What did you expect instead?"),
+      "",
+      "Steps to repeat the issue",
+      formFieldValue(supportTicketForm, "Steps to repeat the issue"),
+      "",
+      "Extra notes",
+      formFieldValue(supportTicketForm, "Additional notes"),
+      "",
+      `Submitted from: ${window.location.href}`,
+    ]);
+  });
+
+  supportTicketForm.addEventListener("reset", () => {
+    window.setTimeout(() => setupOtherFields(supportTicketForm), 0);
     if (error) error.textContent = "";
   });
 }

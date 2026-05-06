@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dragon Budget Support | Contact Help</title>
-  <meta name="description" content="Contact Dragon Budget support for calculator questions, Early Alpha feedback, privacy requests, and site issues.">
+  <meta name="description" content="Send a Dragon Budget support ticket for bugs, feedback, calculator questions, privacy requests, and site issues.">
   <link rel="canonical" href="https://dragonbudget.com/support/">
   <meta property="og:title" content="Dragon Budget Support">
-  <meta property="og:description" content="Contact Dragon Budget support by email.">
+  <meta property="og:description" content="Report bugs and send actionable Dragon Budget feedback by email.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dragonbudget.com/support/">
   <meta property="og:image" content="https://dragonbudget.com/assets/social-preview.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/dragon-head-icon.png" type="image/png">
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="stylesheet" href="../style.css?v=20260503-contrast">
+  <link rel="stylesheet" href="../style.css?v=20260505-support-ticket">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,37 +44,182 @@
         <div class="hero-content">
           <p class="eyebrow">Support</p>
           <h1>Contact Dragon Budget support.</h1>
-          <p class="lead">For calculator questions, Early Alpha feedback, privacy requests, or site issues, send a note to support@dragonbudget.com.</p>
+          <p class="lead">Report bugs, ask for help, or send actionable feedback. The ticket form opens a prepared email to support@dragonbudget.com.</p>
           <div class="hero-actions">
-            <a class="button gold" href="mailto:support@dragonbudget.com?subject=Dragon%20Budget%20support%20request&body=Hi%20Dragon%20Budget%20support%2C%0A%0ANeed%20help%20with%3A%20%0A%0APage%20or%20feature%3A%20%0A%0AWhat%20happened%3A%20%0A%0AWhat%20I%20expected%3A%20%0A%0ADevice%20and%20browser%20(optional)%3A%20%0A%0AName%20(optional)%3A%20">Draft support email</a>
+            <a class="button gold" href="#support-ticket-form">Start support ticket</a>
             <a class="button secondary" href="../faq/index.html">Read the FAQ</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="support-topics-heading">
-      <div class="container grid three">
-        <article class="panel">
-          <h2 id="support-topics-heading">Calculator help</h2>
-          <p>Ask about inputs, results, confusing labels, or a safe-to-spend estimate that does not seem clear.</p>
-        </article>
-        <article class="panel">
-          <h2>Alpha feedback</h2>
-          <p>Share what feels useful, what is missing, or what would make Dragon Budget more trustworthy before launch.</p>
-        </article>
-        <article class="panel">
-          <h2>Privacy requests</h2>
-          <p>Ask about tester-list removal, support emails, privacy expectations, or future product data boundaries.</p>
-        </article>
+    <section class="section" aria-labelledby="ticket-heading">
+      <div class="container">
+        <h2 id="ticket-heading">Support ticket</h2>
+        <p class="section-intro">You do not need technical language. Pick the closest options, describe what happened in your own words, and choose Other when the list does not fit.</p>
+        <noscript><p class="note">If the support ticket button does not open an email, send the page, device, browser, what happened, and what you expected to <a href="mailto:support@dragonbudget.com">support@dragonbudget.com</a>.</p></noscript>
+        <form class="tool-panel survey-form" id="support-ticket-form" data-support-ticket novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="support-name">Name</label>
+              <input id="support-name" name="Name" type="text" autocomplete="name" placeholder="Optional">
+            </div>
+            <div class="field">
+              <label for="support-email">Email</label>
+              <input id="support-email" name="Email" type="email" autocomplete="email" placeholder="Optional, but needed if you want a reply">
+            </div>
+            <div class="field">
+              <label for="support-ticket-type">What kind of ticket is this?</label>
+              <select id="support-ticket-type" name="Ticket type" required>
+                <option value="">Choose one</option>
+                <option>Bug report</option>
+                <option>Calculator question</option>
+                <option>Alpha feedback</option>
+                <option>Accessibility issue</option>
+                <option>Privacy request</option>
+                <option>Content correction</option>
+                <option>General question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="support-ticket-type-other">Other ticket type</label>
+              <input id="support-ticket-type-other" name="Ticket type other" type="text" placeholder="Tell me what kind of help you need" data-other-for="support-ticket-type">
+            </div>
+            <div class="field">
+              <label for="support-page">Page or feature</label>
+              <select id="support-page" name="Page or feature" required>
+                <option value="">Choose one</option>
+                <option>Home page</option>
+                <option>Safe-to-spend calculator</option>
+                <option>Alpha survey</option>
+                <option>Early Alpha signup</option>
+                <option>Guides</option>
+                <option>Roadmap or features</option>
+                <option>Navigation or mobile menu</option>
+                <option>Privacy or terms</option>
+                <option>I am not sure</option>
+                <option>Other</option>
+              </select>
+              <p class="field-help">Closest match is enough.</p>
+            </div>
+            <div class="field is-hidden">
+              <label for="support-page-other">Other page or feature</label>
+              <input id="support-page-other" name="Page or feature other" type="text" placeholder="Name the page, feature, or link" data-other-for="support-page">
+            </div>
+            <div class="field">
+              <label for="support-impact">How much did it affect you?</label>
+              <select id="support-impact" name="Impact" required>
+                <option value="">Choose one</option>
+                <option>Blocked me from using the page</option>
+                <option>Made the page confusing</option>
+                <option>Small problem, but worth fixing</option>
+                <option>Suggestion or idea</option>
+                <option>I am not sure</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="support-device">Device type</label>
+              <select id="support-device" name="Device type" required>
+                <option value="">Choose one</option>
+                <option>Mobile phone</option>
+                <option>Tablet</option>
+                <option>Laptop</option>
+                <option>Desktop</option>
+                <option>I am not sure</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="support-device-other">Other device type</label>
+              <input id="support-device-other" name="Device type other" type="text" placeholder="Tell me what kind of device" data-other-for="support-device">
+            </div>
+            <div class="field">
+              <label for="support-platform">Platform</label>
+              <select id="support-platform" name="Platform" required>
+                <option value="">Choose one</option>
+                <option>iOS</option>
+                <option>Android</option>
+                <option>Windows</option>
+                <option>macOS</option>
+                <option>Linux</option>
+                <option>ChromeOS</option>
+                <option>I am not sure</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="support-platform-other">Other platform</label>
+              <input id="support-platform-other" name="Platform other" type="text" placeholder="Example: iPadOS, an older tablet, another system" data-other-for="support-platform">
+            </div>
+            <div class="field">
+              <label for="support-browser">Browser</label>
+              <select id="support-browser" name="Browser" required>
+                <option value="">Choose one</option>
+                <option>Chrome</option>
+                <option>Safari</option>
+                <option>Firefox</option>
+                <option>Edge</option>
+                <option>Samsung Internet</option>
+                <option>Brave</option>
+                <option>I am not sure</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="support-browser-other">Other browser</label>
+              <input id="support-browser-other" name="Browser other" type="text" placeholder="Tell me which browser or app opened the page" data-other-for="support-browser">
+            </div>
+            <div class="field">
+              <label for="support-screen">Screen size or device model</label>
+              <input id="support-screen" name="Screen size or device model" type="text" placeholder="Optional: iPhone 15, Pixel 8, 14-inch laptop">
+            </div>
+            <div class="field full">
+              <label for="support-happened">What happened?</label>
+              <textarea id="support-happened" name="What happened?" rows="4" required placeholder="Example: I tapped the calculator button, but nothing changed."></textarea>
+              <p class="field-help">A plain description is perfect.</p>
+            </div>
+            <div class="field full">
+              <label for="support-expected">What did you expect instead?</label>
+              <textarea id="support-expected" name="What did you expect instead?" rows="3" required placeholder="Example: I expected the result to update after I entered my numbers."></textarea>
+            </div>
+            <div class="field full">
+              <label for="support-steps">Steps to repeat the issue</label>
+              <textarea id="support-steps" name="Steps to repeat the issue" rows="4" placeholder="Optional: 1. Open page. 2. Tap button. 3. See error."></textarea>
+            </div>
+            <div class="field full">
+              <label for="support-notes">Extra notes</label>
+              <textarea id="support-notes" name="Additional notes" rows="3" placeholder="Optional: paste an error message, describe a screenshot, or add anything else useful."></textarea>
+            </div>
+          </div>
+          <fieldset class="choice-group">
+            <legend>May support contact you about this?</legend>
+            <label><input type="radio" name="Follow-up permission" value="Yes, follow up"> Yes, follow up</label>
+            <label><input type="radio" name="Follow-up permission" value="No follow-up needed"> No follow-up needed</label>
+          </fieldset>
+          <p class="form-error" id="support-ticket-error" role="alert"></p>
+          <div class="form-actions">
+            <button class="button gold" type="submit">Send support ticket</button>
+            <button class="button secondary" type="reset">Clear ticket</button>
+          </div>
+        </form>
       </div>
     </section>
 
     <section class="section alt" aria-labelledby="email-heading">
-      <div class="container article-body">
-        <h2 id="email-heading">What to include</h2>
-        <p>The email draft asks for the page or feature, what happened, what you expected, and optional device/browser details. Please do not send bank logins, account numbers, or sensitive financial documents.</p>
-        <p><strong>Support email:</strong> <a href="mailto:support@dragonbudget.com">support@dragonbudget.com</a></p>
+      <div class="container grid three">
+        <article class="panel">
+          <h2 id="email-heading">Good bug reports</h2>
+          <p>Include what you clicked, what happened, what you expected, and the device or browser you used.</p>
+        </article>
+        <article class="panel">
+          <h2>Helpful feedback</h2>
+          <p>Tell me which wording, page, or feature confused you and what would have made it easier.</p>
+        </article>
+        <article class="panel">
+          <h2>Privacy boundary</h2>
+          <p>Do not send bank logins, account numbers, screenshots with private financial details, or sensitive documents.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -85,8 +230,8 @@
       <div><h2>Explore</h2><nav class="footer-links"><a href="../can-i-afford-this-calculator/index.html">Calculator</a><a href="../alpha/index.html">Early Alpha</a><a href="../faq/index.html">FAQ</a></nav></div>
       <div><h2>Trust</h2><nav class="footer-links"><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div>
     </div>
-    <div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div>
+    <div class="container footer-bottom">© <span data-year></span> Monydragon LLC. Dragon Budget is a budgeting aid, not financial advice.</div>
   </footer>
-  <script src="../script.js?v=20260505-navsync"></script>
+  <script src="../script.js?v=20260505-support-ticket"></script>
 </body>
 </html>

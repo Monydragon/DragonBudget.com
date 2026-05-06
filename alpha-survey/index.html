@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/dragon-head-icon.png" type="image/png">
   <link rel="manifest" href="../site.webmanifest">
-  <link rel="stylesheet" href="../style.css?v=20260505-alpha-survey">
+  <link rel="stylesheet" href="../style.css?v=20260505-support-ticket">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -83,6 +83,10 @@
                 <option>Other</option>
               </select>
             </div>
+            <div class="field is-hidden">
+              <label for="survey-device-other">Other device type</label>
+              <input id="survey-device-other" name="Device type other" type="text" placeholder="Tell me what kind of device" data-other-for="survey-device">
+            </div>
             <div class="field">
               <label for="survey-platform">Platform</label>
               <select id="survey-platform" name="Platform" required>
@@ -95,6 +99,10 @@
                 <option>ChromeOS</option>
                 <option>Other</option>
               </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="survey-platform-other">Other platform</label>
+              <input id="survey-platform-other" name="Platform other" type="text" placeholder="Example: iPadOS, older Android tablet, another system" data-other-for="survey-platform">
             </div>
             <div class="field">
               <label for="survey-browser">Browser</label>
@@ -109,9 +117,14 @@
                 <option>Other</option>
               </select>
             </div>
+            <div class="field is-hidden">
+              <label for="survey-browser-other">Other browser</label>
+              <input id="survey-browser-other" name="Browser other" type="text" placeholder="Tell me which browser or app opened the page" data-other-for="survey-browser">
+            </div>
             <div class="field">
               <label for="survey-screen">Screen size or device model</label>
               <input id="survey-screen" name="Screen size or device model" type="text" placeholder="Example: iPhone 15, Pixel 8, 14-inch laptop">
+              <p class="field-help">A rough answer is fine. This helps spot mobile or desktop layout issues.</p>
             </div>
             <div class="field">
               <label for="survey-area">What did you test?</label>
@@ -125,6 +138,10 @@
                 <option>Overall site impression</option>
                 <option>Other</option>
               </select>
+            </div>
+            <div class="field is-hidden">
+              <label for="survey-area-other">Other test area</label>
+              <input id="survey-area-other" name="What did you test other" type="text" placeholder="Tell me what you looked at or tried" data-other-for="survey-area">
             </div>
             <div class="field">
               <label for="survey-rating">Overall clarity</label>
@@ -191,8 +208,8 @@
       <div><h2>Explore</h2><nav class="footer-links"><a href="../alpha/index.html">Early Alpha</a><a href="../can-i-afford-this-calculator/index.html">Calculator</a><a href="../roadmap/index.html">Roadmap</a></nav></div>
       <div><h2>Trust</h2><nav class="footer-links"><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></nav></div>
     </div>
-    <div class="container footer-bottom">© <span data-year></span> Dragon Lens Studios. Dragon Budget is a budgeting aid, not financial advice.</div>
+    <div class="container footer-bottom">© <span data-year></span> Monydragon LLC. Dragon Budget is a budgeting aid, not financial advice.</div>
   </footer>
-  <script src="../script.js?v=20260505-alpha-survey"></script>
+  <script src="../script.js?v=20260505-support-ticket"></script>
 </body>
 </html>

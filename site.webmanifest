@@ -8,13 +8,13 @@
   "theme_color": "#12315c",
   "icons": [
     {
-      "src": "/assets/dragon-head-icon-192.png",
+      "src": "/assets/dragon-head-budget-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/dragon-head-icon.png",
+      "src": "/assets/dragon-head-budget-icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

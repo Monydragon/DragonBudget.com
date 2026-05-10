@@ -1,5 +1,5 @@
 DragonBudget.com LLM Prompt Source
-Last updated: 2026-05-09
+Last updated: 2026-05-10
 Build location: repository root
 Source plan files:
 - Dragon_Budget_AI_Static_Site_Action_Plan_and_Prompt_Pack.docx
@@ -106,6 +106,7 @@ Structured Workflow:
 [prompt 79] - Implemented - Update Site Owner to Monydragon LLC and Add Structured Support Ticket Form
 [prompt 80] - Implemented - Add Alpha Release Downloads Page Linked to Google Drive Builds
 [prompt 81] - Implemented - Add Budget Badge Dragon Icon Variant
+[prompt 82] - Implemented - Use Budget Badge Dragon Icon Site-Wide
 
 [validation: site loads by opening index.html] - Implemented
 [validation: custom domain CNAME present] - Implemented
@@ -123,7 +124,7 @@ Structured Workflow:
 [validation: only one top navigation menu is rendered] - Implemented
 [validation: calculator and demos avoid negative currency displays] - Implemented
 [validation: public app preview uses one top menu and positive outflow labels] - Implemented
-[validation: generated fantasy blue dragon head PNG is used for favicon, manifest, header mark, and mascot/advisor references] - Implemented
+[validation: budget-badge dragon PNG is used for favicon, manifest, header mark, mascot/advisor references, and current icon placements] - Implemented
 [validation: primary navigation links remain consistent across all public HTML pages] - Implemented
 [validation: before and after desktop render captures exist for navbar verification] - Implemented
 [validation: alpha survey page sends structured tester feedback to alpha@dragonbudget.com] - Implemented
@@ -138,16 +139,17 @@ Structured Workflow:
 Notes:
 - The prompt source is now the living implementation ledger. Status labels above should be updated whenever a page, workflow, or validation changes.
 - External account actions such as GitHub Pages settings, DNS verification, HTTPS confirmation, and Search Console submission are tracked in the launch pages because they cannot be completed from static files alone.
-- Prompts 22 through 81 expanded the site into a 65-page static product, guide, trust, launch, polish, feedback, support, release, asset, and QA system with a complete human site map and matching XML sitemap.
+- Prompts 22 through 82 expanded the site into a 65-page static product, guide, trust, launch, polish, feedback, support, release, asset, and QA system with a complete human site map and matching XML sitemap.
 - The site defaults to light mode for broad readability, includes a quick dark mode toggle, and uses a mature blue dragon mascot direction across brand and planning pages.
 - Internal navigation uses explicit index.html links so the site works when opened locally with file:// and still publishes normally on GitHub Pages.
-- Prompt 76 now uses a generated fantasy blue dragon-head PNG for the favicon, manifest icons, header mark, mascot usage, and advisor references; it also removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
+- Prompt 76 introduced a generated fantasy blue dragon-head PNG, removed the injected second navigation row, changed calculator/demo outputs to show positive shortfalls instead of negative currency, and replaced public mockup usage with a corrected app-preview SVG.
 - Navigation follow-up: all public pages now cache-bust style.css and script.js with a nav-fix version; CSS hides stale quick-nav rows and JavaScript removes any extra header nav so only the primary top navigation remains.
 - Prompt 77 standardizes the primary navigation source and rendered output across every public page so Alpha and the other primary links do not disappear while browsing. The full render audit lives in screenshots/nav-before-all and screenshots/nav-after-all.
 - Prompt 78 adds a dedicated alpha survey page that asks what testers used and tested, including device type, platform, browser, screen or device model, overall clarity, useful parts, confusing parts, missing features, and follow-up permission. Responses are composed into an email to alpha@dragonbudget.com because the site remains static and no-backend.
 - Prompt 79 updates public footer and organization references to Monydragon LLC, upgrades the support page into a structured email-based ticket form for bugs and actionable feedback, and improves form dropdowns so Other selections reveal fields where users can explain in plain language.
 - Prompt 80 adds an Alpha Downloads page linked from the Early Alpha flow. It exposes Google Drive release access for Windows, Linux, MacOSX, and Android with ZIP and raw-file buttons for each platform. The Drive folder could not be enumerated anonymously from the local environment, so direct per-file links should replace the shared folder links when individual public file IDs are available.
 - Prompt 81 keeps the original dragon-head icon files unchanged and adds optional Dragon Budget icon variants with a bottom-right gold/cyan budgeting badge at assets/dragon-head-budget-icon.png and assets/dragon-head-budget-icon-192.png.
+- Prompt 82 switches favicon links, manifest icons, header marks, mascot/advisor usage, and brand-gallery references to the budget-badge dragon icon while leaving the original dragon-head icon files available in assets.
 - Ongoing workflow: when a new DragonBudget.com task is completed, update this prompt source immediately with the next prompt number, implementation summary, relevant validation entries, and notes. This keeps the file usable as the fast working ledger for future prompts.
 - HTTPS follow-up: DNS and the Let's Encrypt certificate validate for dragonbudget.com and www.dragonbudget.com; the remaining dashboard task is enabling HTTPS enforcement so HTTP redirects to HTTPS.
 
@@ -347,3 +349,6 @@ Add easy Early Alpha release access after users join the alpha. Use the Google D
 
 [prompt 81]
 Create a new Dragon Budget app icon asset variant without replacing the original dragon-head icon. Preserve the existing blue dragon image, then add a bottom-right budgeting badge that plays the same role a checkbox plays for a task app. Use a readable gold-and-cyan badge with a check mark and budget planning motif, save 512px and 192px PNG versions in assets, and update the prompt ledger with validation notes.
+
+[prompt 82]
+Use assets/dragon-head-budget-icon.png as the active favicon and everywhere the dragon icon appears across DragonBudget.com. Update the 192px and 512px web manifest entries, public page favicon links, header marks, advisor mark CSS, mascot and gallery image references, and visible copy that describes the active icon. Keep the original dragon-head icon assets in the repository, update the prompt ledger, and run the static site checker.
